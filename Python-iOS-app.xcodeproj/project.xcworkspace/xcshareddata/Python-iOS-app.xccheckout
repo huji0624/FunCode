@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
+	<false/>
+	<key>IDESourceControlProjectIdentifier</key>
+	<string>715C0D83-C453-497B-A11F-3A1A7D531250</string>
+	<key>IDESourceControlProjectName</key>
+	<string>Python-iOS-app</string>
+	<key>IDESourceControlProjectOriginsDictionary</key>
+	<dict>
+		<key>D52ACE9BB01B08043365D51AD785803B6607E90E</key>
+		<string>https://github.com/fancyzero/Python-iOS.git</string>
+	</dict>
+	<key>IDESourceControlProjectPath</key>
+	<string>Python-iOS-app.xcodeproj</string>
+	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
+	<dict>
+		<key>D52ACE9BB01B08043365D51AD785803B6607E90E</key>
+		<string>../..</string>
+	</dict>
+	<key>IDESourceControlProjectURL</key>
+	<string>https://github.com/fancyzero/Python-iOS.git</string>
+	<key>IDESourceControlProjectVersion</key>
+	<integer>111</integer>
+	<key>IDESourceControlProjectWCCIdentifier</key>
+	<string>D52ACE9BB01B08043365D51AD785803B6607E90E</string>
+	<key>IDESourceControlProjectWCConfigurations</key>
+	<array>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>D52ACE9BB01B08043365D51AD785803B6607E90E</string>
+			<key>IDESourceControlWCCName</key>
+			<string>Python-iOS</string>
+		</dict>
+	</array>
+</dict>
+</plist>

@@ -1,0 +1,1 @@
+PODS_PYTHON_IOS_APP_CRGRADIENTNAVIGATIONBAR_OTHER_LDFLAGS = -framework "QuartzCore" -framework "UIKit"

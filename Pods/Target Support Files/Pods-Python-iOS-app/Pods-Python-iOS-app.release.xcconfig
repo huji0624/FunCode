@@ -1,0 +1,7 @@
+CLANG_MODULES_AUTOLINK = YES
+GCC_PREPROCESSOR_DEFINITIONS = $(inherited) COCOAPODS=1
+HEADER_SEARCH_PATHS = "${PODS_ROOT}/Headers/Public" "${PODS_ROOT}/Headers/Public/AFNetworking" "${PODS_ROOT}/Headers/Public/AMSmoothAlert" "${PODS_ROOT}/Headers/Public/CRGradientNavigationBar" "${PODS_ROOT}/Headers/Public/GPUImage" "${PODS_ROOT}/Headers/Public/MBProgressHUD" "${PODS_ROOT}/Headers/Public/MSDynamicsDrawerViewController"
+OTHER_CFLAGS = $(inherited) -isystem "${PODS_ROOT}/Headers/Public" -isystem "${PODS_ROOT}/Headers/Public/AFNetworking" -isystem "${PODS_ROOT}/Headers/Public/AMSmoothAlert" -isystem "${PODS_ROOT}/Headers/Public/CRGradientNavigationBar" -isystem "${PODS_ROOT}/Headers/Public/GPUImage" -isystem "${PODS_ROOT}/Headers/Public/MBProgressHUD" -isystem "${PODS_ROOT}/Headers/Public/MSDynamicsDrawerViewController"
+OTHER_LDFLAGS = -ObjC -l"Pods-Python-iOS-app-AFNetworking" -l"Pods-Python-iOS-app-AMSmoothAlert" -l"Pods-Python-iOS-app-CRGradientNavigationBar" -l"Pods-Python-iOS-app-GPUImage" -l"Pods-Python-iOS-app-MBProgressHUD" -l"Pods-Python-iOS-app-MSDynamicsDrawerViewController" -framework "AVFoundation" -framework "CoreGraphics" -framework "CoreMedia" -framework "Foundation" -framework "MobileCoreServices" -framework "OpenGLES" -framework "QuartzCore" -framework "Security" -framework "SystemConfiguration" -framework "UIKit"
+OTHER_LIBTOOLFLAGS = $(OTHER_LDFLAGS)
+PODS_ROOT = ${SRCROOT}/Pods

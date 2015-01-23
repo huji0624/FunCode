@@ -1,0 +1,635 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		04A1DE2D17C4FE4E00B87DED /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 04A1DE2C17C4FE4E00B87DED /* UIKit.framework */; };
+		04A1DE2F17C4FE4E00B87DED /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 04A1DE2E17C4FE4E00B87DED /* Foundation.framework */; };
+		04A1DE3117C4FE4E00B87DED /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 04A1DE3017C4FE4E00B87DED /* CoreGraphics.framework */; };
+		04A1DE3717C4FE4E00B87DED /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 04A1DE3517C4FE4E00B87DED /* InfoPlist.strings */; };
+		04A1DE3917C4FE4E00B87DED /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 04A1DE3817C4FE4E00B87DED /* main.m */; };
+		04A1DE3D17C4FE4E00B87DED /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 04A1DE3C17C4FE4E00B87DED /* AppDelegate.m */; };
+		04A1DE3F17C4FE4E00B87DED /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = 04A1DE3E17C4FE4E00B87DED /* Default.png */; };
+		04A1DE4117C4FE4E00B87DED /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 04A1DE4017C4FE4E00B87DED /* Default@2x.png */; };
+		04A1DE4317C4FE4E00B87DED /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 04A1DE4217C4FE4E00B87DED /* Default-568h@2x.png */; };
+		04A1DE4617C4FE4E00B87DED /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 04A1DE4517C4FE4E00B87DED /* ViewController.m */; };
+		04A1DE4917C4FE4E00B87DED /* ViewController_iPhone.xib in Resources */ = {isa = PBXBuildFile; fileRef = 04A1DE4717C4FE4E00B87DED /* ViewController_iPhone.xib */; };
+		04A1DE4C17C4FE4E00B87DED /* ViewController_iPad.xib in Resources */ = {isa = PBXBuildFile; fileRef = 04A1DE4A17C4FE4E00B87DED /* ViewController_iPad.xib */; };
+		04A1DE5817C501B300B87DED /* python in Resources */ = {isa = PBXBuildFile; fileRef = 04A1DE5717C501B300B87DED /* python */; };
+		9685CF6B4355231DE7610D36 /* libPods-Python-iOS-app.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 4E03FB72C1789F6CF44CBA22 /* libPods-Python-iOS-app.a */; };
+		CE95DA3B1A71F4790086CD5C /* PythonRun.m in Sources */ = {isa = PBXBuildFile; fileRef = CE95DA3A1A71F4790086CD5C /* PythonRun.m */; };
+		CE95DA3E1A71FCD80086CD5C /* FCEditorViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CE95DA3D1A71FCD80086CD5C /* FCEditorViewController.m */; };
+		CE95DA9D1A7211450086CD5C /* liblibPython.a in Frameworks */ = {isa = PBXBuildFile; fileRef = CE95DA9B1A7211450086CD5C /* liblibPython.a */; };
+		CE95DAA01A721F560086CD5C /* FCSetting.m in Sources */ = {isa = PBXBuildFile; fileRef = CE95DA9F1A721F560086CD5C /* FCSetting.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		04A1DE2917C4FE4E00B87DED /* Python-iOS-app.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Python-iOS-app.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		04A1DE2C17C4FE4E00B87DED /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		04A1DE2E17C4FE4E00B87DED /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		04A1DE3017C4FE4E00B87DED /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		04A1DE3417C4FE4E00B87DED /* Python-iOS-app-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Python-iOS-app-Info.plist"; sourceTree = "<group>"; };
+		04A1DE3617C4FE4E00B87DED /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		04A1DE3817C4FE4E00B87DED /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		04A1DE3A17C4FE4E00B87DED /* Python-iOS-app-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Python-iOS-app-Prefix.pch"; sourceTree = "<group>"; };
+		04A1DE3B17C4FE4E00B87DED /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		04A1DE3C17C4FE4E00B87DED /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		04A1DE3E17C4FE4E00B87DED /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Default.png; sourceTree = "<group>"; };
+		04A1DE4017C4FE4E00B87DED /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default@2x.png"; sourceTree = "<group>"; };
+		04A1DE4217C4FE4E00B87DED /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
+		04A1DE4417C4FE4E00B87DED /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		04A1DE4517C4FE4E00B87DED /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		04A1DE4817C4FE4E00B87DED /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/ViewController_iPhone.xib; sourceTree = "<group>"; };
+		04A1DE4B17C4FE4E00B87DED /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/ViewController_iPad.xib; sourceTree = "<group>"; };
+		04A1DE5717C501B300B87DED /* python */ = {isa = PBXFileReference; lastKnownFileType = folder; name = python; path = "Python-iOS-app/python"; sourceTree = "<group>"; };
+		4E03FB72C1789F6CF44CBA22 /* libPods-Python-iOS-app.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Python-iOS-app.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		74D104E83A5087014E54E52D /* Pods-Python-iOS-app.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Python-iOS-app.release.xcconfig"; path = "Pods/Target Support Files/Pods-Python-iOS-app/Pods-Python-iOS-app.release.xcconfig"; sourceTree = "<group>"; };
+		BA548A1AC8F2DD8408CEF35B /* Pods-Python-iOS-app.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Python-iOS-app.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Python-iOS-app/Pods-Python-iOS-app.debug.xcconfig"; sourceTree = "<group>"; };
+		CE95DA391A71F4790086CD5C /* PythonRun.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PythonRun.h; sourceTree = "<group>"; };
+		CE95DA3A1A71F4790086CD5C /* PythonRun.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PythonRun.m; sourceTree = "<group>"; };
+		CE95DA3C1A71FCD80086CD5C /* FCEditorViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FCEditorViewController.h; sourceTree = "<group>"; };
+		CE95DA3D1A71FCD80086CD5C /* FCEditorViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FCEditorViewController.m; sourceTree = "<group>"; };
+		CE95DA411A7211450086CD5C /* abstract.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = abstract.h; sourceTree = "<group>"; };
+		CE95DA421A7211450086CD5C /* asdl.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = asdl.h; sourceTree = "<group>"; };
+		CE95DA431A7211450086CD5C /* ast.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ast.h; sourceTree = "<group>"; };
+		CE95DA441A7211450086CD5C /* bitset.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = bitset.h; sourceTree = "<group>"; };
+		CE95DA451A7211450086CD5C /* boolobject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = boolobject.h; sourceTree = "<group>"; };
+		CE95DA461A7211450086CD5C /* bufferobject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = bufferobject.h; sourceTree = "<group>"; };
+		CE95DA471A7211450086CD5C /* bytearrayobject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = bytearrayobject.h; sourceTree = "<group>"; };
+		CE95DA481A7211450086CD5C /* bytes_methods.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = bytes_methods.h; sourceTree = "<group>"; };
+		CE95DA491A7211450086CD5C /* bytesobject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = bytesobject.h; sourceTree = "<group>"; };
+		CE95DA4A1A7211450086CD5C /* cellobject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = cellobject.h; sourceTree = "<group>"; };
+		CE95DA4B1A7211450086CD5C /* ceval.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ceval.h; sourceTree = "<group>"; };
+		CE95DA4C1A7211450086CD5C /* classobject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = classobject.h; sourceTree = "<group>"; };
+		CE95DA4D1A7211450086CD5C /* cobject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = cobject.h; sourceTree = "<group>"; };
+		CE95DA4E1A7211450086CD5C /* code.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = code.h; sourceTree = "<group>"; };
+		CE95DA4F1A7211450086CD5C /* codecs.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = codecs.h; sourceTree = "<group>"; };
+		CE95DA501A7211450086CD5C /* compile.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = compile.h; sourceTree = "<group>"; };
+		CE95DA511A7211450086CD5C /* complexobject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = complexobject.h; sourceTree = "<group>"; };
+		CE95DA521A7211450086CD5C /* cStringIO.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = cStringIO.h; sourceTree = "<group>"; };
+		CE95DA531A7211450086CD5C /* datetime.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = datetime.h; sourceTree = "<group>"; };
+		CE95DA541A7211450086CD5C /* descrobject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = descrobject.h; sourceTree = "<group>"; };
+		CE95DA551A7211450086CD5C /* dictobject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = dictobject.h; sourceTree = "<group>"; };
+		CE95DA561A7211450086CD5C /* dtoa.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = dtoa.h; sourceTree = "<group>"; };
+		CE95DA571A7211450086CD5C /* enumobject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = enumobject.h; sourceTree = "<group>"; };
+		CE95DA581A7211450086CD5C /* errcode.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = errcode.h; sourceTree = "<group>"; };
+		CE95DA591A7211450086CD5C /* eval.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = eval.h; sourceTree = "<group>"; };
+		CE95DA5A1A7211450086CD5C /* fileobject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = fileobject.h; sourceTree = "<group>"; };
+		CE95DA5B1A7211450086CD5C /* floatobject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = floatobject.h; sourceTree = "<group>"; };
+		CE95DA5C1A7211450086CD5C /* frameobject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = frameobject.h; sourceTree = "<group>"; };
+		CE95DA5D1A7211450086CD5C /* funcobject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = funcobject.h; sourceTree = "<group>"; };
+		CE95DA5E1A7211450086CD5C /* genobject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = genobject.h; sourceTree = "<group>"; };
+		CE95DA5F1A7211450086CD5C /* graminit.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = graminit.h; sourceTree = "<group>"; };
+		CE95DA601A7211450086CD5C /* grammar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = grammar.h; sourceTree = "<group>"; };
+		CE95DA611A7211450086CD5C /* import.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = import.h; sourceTree = "<group>"; };
+		CE95DA621A7211450086CD5C /* intobject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = intobject.h; sourceTree = "<group>"; };
+		CE95DA631A7211450086CD5C /* intrcheck.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = intrcheck.h; sourceTree = "<group>"; };
+		CE95DA641A7211450086CD5C /* iterobject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = iterobject.h; sourceTree = "<group>"; };
+		CE95DA651A7211450086CD5C /* listobject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = listobject.h; sourceTree = "<group>"; };
+		CE95DA661A7211450086CD5C /* longintrepr.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = longintrepr.h; sourceTree = "<group>"; };
+		CE95DA671A7211450086CD5C /* longobject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = longobject.h; sourceTree = "<group>"; };
+		CE95DA681A7211450086CD5C /* marshal.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = marshal.h; sourceTree = "<group>"; };
+		CE95DA691A7211450086CD5C /* memoryobject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = memoryobject.h; sourceTree = "<group>"; };
+		CE95DA6A1A7211450086CD5C /* metagrammar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = metagrammar.h; sourceTree = "<group>"; };
+		CE95DA6B1A7211450086CD5C /* methodobject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = methodobject.h; sourceTree = "<group>"; };
+		CE95DA6C1A7211450086CD5C /* modsupport.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = modsupport.h; sourceTree = "<group>"; };
+		CE95DA6D1A7211450086CD5C /* moduleobject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = moduleobject.h; sourceTree = "<group>"; };
+		CE95DA6E1A7211450086CD5C /* node.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = node.h; sourceTree = "<group>"; };
+		CE95DA6F1A7211450086CD5C /* object.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = object.h; sourceTree = "<group>"; };
+		CE95DA701A7211450086CD5C /* objimpl.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = objimpl.h; sourceTree = "<group>"; };
+		CE95DA711A7211450086CD5C /* opcode.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = opcode.h; sourceTree = "<group>"; };
+		CE95DA721A7211450086CD5C /* osdefs.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = osdefs.h; sourceTree = "<group>"; };
+		CE95DA731A7211450086CD5C /* parsetok.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = parsetok.h; sourceTree = "<group>"; };
+		CE95DA741A7211450086CD5C /* patchlevel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = patchlevel.h; sourceTree = "<group>"; };
+		CE95DA751A7211450086CD5C /* pgen.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = pgen.h; sourceTree = "<group>"; };
+		CE95DA761A7211450086CD5C /* pgenheaders.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = pgenheaders.h; sourceTree = "<group>"; };
+		CE95DA771A7211450086CD5C /* py_curses.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = py_curses.h; sourceTree = "<group>"; };
+		CE95DA781A7211450086CD5C /* pyarena.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = pyarena.h; sourceTree = "<group>"; };
+		CE95DA791A7211450086CD5C /* pycapsule.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = pycapsule.h; sourceTree = "<group>"; };
+		CE95DA7A1A7211450086CD5C /* pyctype.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = pyctype.h; sourceTree = "<group>"; };
+		CE95DA7B1A7211450086CD5C /* pydebug.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = pydebug.h; sourceTree = "<group>"; };
+		CE95DA7C1A7211450086CD5C /* pyerrors.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = pyerrors.h; sourceTree = "<group>"; };
+		CE95DA7D1A7211450086CD5C /* pyexpat.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = pyexpat.h; sourceTree = "<group>"; };
+		CE95DA7E1A7211450086CD5C /* pyfpe.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = pyfpe.h; sourceTree = "<group>"; };
+		CE95DA7F1A7211450086CD5C /* pygetopt.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = pygetopt.h; sourceTree = "<group>"; };
+		CE95DA801A7211450086CD5C /* pymacconfig.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = pymacconfig.h; sourceTree = "<group>"; };
+		CE95DA811A7211450086CD5C /* pymath.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = pymath.h; sourceTree = "<group>"; };
+		CE95DA821A7211450086CD5C /* pymem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = pymem.h; sourceTree = "<group>"; };
+		CE95DA831A7211450086CD5C /* pyport.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = pyport.h; sourceTree = "<group>"; };
+		CE95DA841A7211450086CD5C /* pystate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = pystate.h; sourceTree = "<group>"; };
+		CE95DA851A7211450086CD5C /* pystrcmp.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = pystrcmp.h; sourceTree = "<group>"; };
+		CE95DA861A7211450086CD5C /* pystrtod.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = pystrtod.h; sourceTree = "<group>"; };
+		CE95DA871A7211450086CD5C /* Python-ast.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "Python-ast.h"; sourceTree = "<group>"; };
+		CE95DA881A7211450086CD5C /* Python.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Python.h; sourceTree = "<group>"; };
+		CE95DA891A7211450086CD5C /* pythonrun.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = pythonrun.h; sourceTree = "<group>"; };
+		CE95DA8A1A7211450086CD5C /* pythread.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = pythread.h; sourceTree = "<group>"; };
+		CE95DA8B1A7211450086CD5C /* rangeobject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = rangeobject.h; sourceTree = "<group>"; };
+		CE95DA8C1A7211450086CD5C /* setobject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = setobject.h; sourceTree = "<group>"; };
+		CE95DA8D1A7211450086CD5C /* sliceobject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = sliceobject.h; sourceTree = "<group>"; };
+		CE95DA8E1A7211450086CD5C /* stringobject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = stringobject.h; sourceTree = "<group>"; };
+		CE95DA8F1A7211450086CD5C /* structmember.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = structmember.h; sourceTree = "<group>"; };
+		CE95DA901A7211450086CD5C /* structseq.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = structseq.h; sourceTree = "<group>"; };
+		CE95DA911A7211450086CD5C /* symtable.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = symtable.h; sourceTree = "<group>"; };
+		CE95DA921A7211450086CD5C /* sysmodule.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = sysmodule.h; sourceTree = "<group>"; };
+		CE95DA931A7211450086CD5C /* timefuncs.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = timefuncs.h; sourceTree = "<group>"; };
+		CE95DA941A7211450086CD5C /* token.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = token.h; sourceTree = "<group>"; };
+		CE95DA951A7211450086CD5C /* traceback.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = traceback.h; sourceTree = "<group>"; };
+		CE95DA961A7211450086CD5C /* tupleobject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = tupleobject.h; sourceTree = "<group>"; };
+		CE95DA971A7211450086CD5C /* ucnhash.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ucnhash.h; sourceTree = "<group>"; };
+		CE95DA981A7211450086CD5C /* unicodeobject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = unicodeobject.h; sourceTree = "<group>"; };
+		CE95DA991A7211450086CD5C /* warnings.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = warnings.h; sourceTree = "<group>"; };
+		CE95DA9A1A7211450086CD5C /* weakrefobject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = weakrefobject.h; sourceTree = "<group>"; };
+		CE95DA9B1A7211450086CD5C /* liblibPython.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = liblibPython.a; sourceTree = "<group>"; };
+		CE95DA9C1A7211450086CD5C /* pyconfig.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = pyconfig.h; sourceTree = "<group>"; };
+		CE95DA9E1A721F560086CD5C /* FCSetting.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FCSetting.h; sourceTree = "<group>"; };
+		CE95DA9F1A721F560086CD5C /* FCSetting.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FCSetting.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		04A1DE2617C4FE4E00B87DED /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				04A1DE2D17C4FE4E00B87DED /* UIKit.framework in Frameworks */,
+				04A1DE2F17C4FE4E00B87DED /* Foundation.framework in Frameworks */,
+				CE95DA9D1A7211450086CD5C /* liblibPython.a in Frameworks */,
+				04A1DE3117C4FE4E00B87DED /* CoreGraphics.framework in Frameworks */,
+				9685CF6B4355231DE7610D36 /* libPods-Python-iOS-app.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		04A1DE2017C4FE4E00B87DED = {
+			isa = PBXGroup;
+			children = (
+				04A1DE5617C500B500B87DED /* Bundles */,
+				04A1DE3217C4FE4E00B87DED /* Python-iOS-app */,
+				04A1DE2B17C4FE4E00B87DED /* Frameworks */,
+				04A1DE2A17C4FE4E00B87DED /* Products */,
+				6247F6EF5E18FADAE0607B06 /* Pods */,
+			);
+			sourceTree = "<group>";
+		};
+		04A1DE2A17C4FE4E00B87DED /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				04A1DE2917C4FE4E00B87DED /* Python-iOS-app.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		04A1DE2B17C4FE4E00B87DED /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				04A1DE2C17C4FE4E00B87DED /* UIKit.framework */,
+				04A1DE2E17C4FE4E00B87DED /* Foundation.framework */,
+				04A1DE3017C4FE4E00B87DED /* CoreGraphics.framework */,
+				4E03FB72C1789F6CF44CBA22 /* libPods-Python-iOS-app.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		04A1DE3217C4FE4E00B87DED /* Python-iOS-app */ = {
+			isa = PBXGroup;
+			children = (
+				CE95DA3F1A7211450086CD5C /* libPython */,
+				CE95DA381A71F4660086CD5C /* Classes */,
+				04A1DE3B17C4FE4E00B87DED /* AppDelegate.h */,
+				04A1DE3C17C4FE4E00B87DED /* AppDelegate.m */,
+				04A1DE4417C4FE4E00B87DED /* ViewController.h */,
+				04A1DE4517C4FE4E00B87DED /* ViewController.m */,
+				04A1DE4717C4FE4E00B87DED /* ViewController_iPhone.xib */,
+				04A1DE4A17C4FE4E00B87DED /* ViewController_iPad.xib */,
+				04A1DE3317C4FE4E00B87DED /* Supporting Files */,
+			);
+			path = "Python-iOS-app";
+			sourceTree = "<group>";
+		};
+		04A1DE3317C4FE4E00B87DED /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				04A1DE3417C4FE4E00B87DED /* Python-iOS-app-Info.plist */,
+				04A1DE3517C4FE4E00B87DED /* InfoPlist.strings */,
+				04A1DE3817C4FE4E00B87DED /* main.m */,
+				04A1DE3A17C4FE4E00B87DED /* Python-iOS-app-Prefix.pch */,
+				04A1DE3E17C4FE4E00B87DED /* Default.png */,
+				04A1DE4017C4FE4E00B87DED /* Default@2x.png */,
+				04A1DE4217C4FE4E00B87DED /* Default-568h@2x.png */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		04A1DE5617C500B500B87DED /* Bundles */ = {
+			isa = PBXGroup;
+			children = (
+				04A1DE5717C501B300B87DED /* python */,
+			);
+			name = Bundles;
+			sourceTree = "<group>";
+		};
+		6247F6EF5E18FADAE0607B06 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				BA548A1AC8F2DD8408CEF35B /* Pods-Python-iOS-app.debug.xcconfig */,
+				74D104E83A5087014E54E52D /* Pods-Python-iOS-app.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		CE95DA381A71F4660086CD5C /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				CE95DA391A71F4790086CD5C /* PythonRun.h */,
+				CE95DA3A1A71F4790086CD5C /* PythonRun.m */,
+				CE95DA3C1A71FCD80086CD5C /* FCEditorViewController.h */,
+				CE95DA3D1A71FCD80086CD5C /* FCEditorViewController.m */,
+				CE95DA9E1A721F560086CD5C /* FCSetting.h */,
+				CE95DA9F1A721F560086CD5C /* FCSetting.m */,
+			);
+			path = Classes;
+			sourceTree = "<group>";
+		};
+		CE95DA3F1A7211450086CD5C /* libPython */ = {
+			isa = PBXGroup;
+			children = (
+				CE95DA401A7211450086CD5C /* Include */,
+				CE95DA9B1A7211450086CD5C /* liblibPython.a */,
+				CE95DA9C1A7211450086CD5C /* pyconfig.h */,
+			);
+			path = libPython;
+			sourceTree = "<group>";
+		};
+		CE95DA401A7211450086CD5C /* Include */ = {
+			isa = PBXGroup;
+			children = (
+				CE95DA411A7211450086CD5C /* abstract.h */,
+				CE95DA421A7211450086CD5C /* asdl.h */,
+				CE95DA431A7211450086CD5C /* ast.h */,
+				CE95DA441A7211450086CD5C /* bitset.h */,
+				CE95DA451A7211450086CD5C /* boolobject.h */,
+				CE95DA461A7211450086CD5C /* bufferobject.h */,
+				CE95DA471A7211450086CD5C /* bytearrayobject.h */,
+				CE95DA481A7211450086CD5C /* bytes_methods.h */,
+				CE95DA491A7211450086CD5C /* bytesobject.h */,
+				CE95DA4A1A7211450086CD5C /* cellobject.h */,
+				CE95DA4B1A7211450086CD5C /* ceval.h */,
+				CE95DA4C1A7211450086CD5C /* classobject.h */,
+				CE95DA4D1A7211450086CD5C /* cobject.h */,
+				CE95DA4E1A7211450086CD5C /* code.h */,
+				CE95DA4F1A7211450086CD5C /* codecs.h */,
+				CE95DA501A7211450086CD5C /* compile.h */,
+				CE95DA511A7211450086CD5C /* complexobject.h */,
+				CE95DA521A7211450086CD5C /* cStringIO.h */,
+				CE95DA531A7211450086CD5C /* datetime.h */,
+				CE95DA541A7211450086CD5C /* descrobject.h */,
+				CE95DA551A7211450086CD5C /* dictobject.h */,
+				CE95DA561A7211450086CD5C /* dtoa.h */,
+				CE95DA571A7211450086CD5C /* enumobject.h */,
+				CE95DA581A7211450086CD5C /* errcode.h */,
+				CE95DA591A7211450086CD5C /* eval.h */,
+				CE95DA5A1A7211450086CD5C /* fileobject.h */,
+				CE95DA5B1A7211450086CD5C /* floatobject.h */,
+				CE95DA5C1A7211450086CD5C /* frameobject.h */,
+				CE95DA5D1A7211450086CD5C /* funcobject.h */,
+				CE95DA5E1A7211450086CD5C /* genobject.h */,
+				CE95DA5F1A7211450086CD5C /* graminit.h */,
+				CE95DA601A7211450086CD5C /* grammar.h */,
+				CE95DA611A7211450086CD5C /* import.h */,
+				CE95DA621A7211450086CD5C /* intobject.h */,
+				CE95DA631A7211450086CD5C /* intrcheck.h */,
+				CE95DA641A7211450086CD5C /* iterobject.h */,
+				CE95DA651A7211450086CD5C /* listobject.h */,
+				CE95DA661A7211450086CD5C /* longintrepr.h */,
+				CE95DA671A7211450086CD5C /* longobject.h */,
+				CE95DA681A7211450086CD5C /* marshal.h */,
+				CE95DA691A7211450086CD5C /* memoryobject.h */,
+				CE95DA6A1A7211450086CD5C /* metagrammar.h */,
+				CE95DA6B1A7211450086CD5C /* methodobject.h */,
+				CE95DA6C1A7211450086CD5C /* modsupport.h */,
+				CE95DA6D1A7211450086CD5C /* moduleobject.h */,
+				CE95DA6E1A7211450086CD5C /* node.h */,
+				CE95DA6F1A7211450086CD5C /* object.h */,
+				CE95DA701A7211450086CD5C /* objimpl.h */,
+				CE95DA711A7211450086CD5C /* opcode.h */,
+				CE95DA721A7211450086CD5C /* osdefs.h */,
+				CE95DA731A7211450086CD5C /* parsetok.h */,
+				CE95DA741A7211450086CD5C /* patchlevel.h */,
+				CE95DA751A7211450086CD5C /* pgen.h */,
+				CE95DA761A7211450086CD5C /* pgenheaders.h */,
+				CE95DA771A7211450086CD5C /* py_curses.h */,
+				CE95DA781A7211450086CD5C /* pyarena.h */,
+				CE95DA791A7211450086CD5C /* pycapsule.h */,
+				CE95DA7A1A7211450086CD5C /* pyctype.h */,
+				CE95DA7B1A7211450086CD5C /* pydebug.h */,
+				CE95DA7C1A7211450086CD5C /* pyerrors.h */,
+				CE95DA7D1A7211450086CD5C /* pyexpat.h */,
+				CE95DA7E1A7211450086CD5C /* pyfpe.h */,
+				CE95DA7F1A7211450086CD5C /* pygetopt.h */,
+				CE95DA801A7211450086CD5C /* pymacconfig.h */,
+				CE95DA811A7211450086CD5C /* pymath.h */,
+				CE95DA821A7211450086CD5C /* pymem.h */,
+				CE95DA831A7211450086CD5C /* pyport.h */,
+				CE95DA841A7211450086CD5C /* pystate.h */,
+				CE95DA851A7211450086CD5C /* pystrcmp.h */,
+				CE95DA861A7211450086CD5C /* pystrtod.h */,
+				CE95DA871A7211450086CD5C /* Python-ast.h */,
+				CE95DA881A7211450086CD5C /* Python.h */,
+				CE95DA891A7211450086CD5C /* pythonrun.h */,
+				CE95DA8A1A7211450086CD5C /* pythread.h */,
+				CE95DA8B1A7211450086CD5C /* rangeobject.h */,
+				CE95DA8C1A7211450086CD5C /* setobject.h */,
+				CE95DA8D1A7211450086CD5C /* sliceobject.h */,
+				CE95DA8E1A7211450086CD5C /* stringobject.h */,
+				CE95DA8F1A7211450086CD5C /* structmember.h */,
+				CE95DA901A7211450086CD5C /* structseq.h */,
+				CE95DA911A7211450086CD5C /* symtable.h */,
+				CE95DA921A7211450086CD5C /* sysmodule.h */,
+				CE95DA931A7211450086CD5C /* timefuncs.h */,
+				CE95DA941A7211450086CD5C /* token.h */,
+				CE95DA951A7211450086CD5C /* traceback.h */,
+				CE95DA961A7211450086CD5C /* tupleobject.h */,
+				CE95DA971A7211450086CD5C /* ucnhash.h */,
+				CE95DA981A7211450086CD5C /* unicodeobject.h */,
+				CE95DA991A7211450086CD5C /* warnings.h */,
+				CE95DA9A1A7211450086CD5C /* weakrefobject.h */,
+			);
+			path = Include;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		04A1DE2817C4FE4E00B87DED /* Python-iOS-app */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 04A1DE4F17C4FE4E00B87DED /* Build configuration list for PBXNativeTarget "Python-iOS-app" */;
+			buildPhases = (
+				7F010F2EBC0C62356CD381C6 /* Check Pods Manifest.lock */,
+				04A1DE2517C4FE4E00B87DED /* Sources */,
+				04A1DE2617C4FE4E00B87DED /* Frameworks */,
+				04A1DE2717C4FE4E00B87DED /* Resources */,
+				E9BF48AF39E0329A2D6E86A2 /* Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Python-iOS-app";
+			productName = "Python-iOS-app";
+			productReference = 04A1DE2917C4FE4E00B87DED /* Python-iOS-app.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		04A1DE2117C4FE4E00B87DED /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0460;
+				ORGANIZATIONNAME = Fancyzero;
+			};
+			buildConfigurationList = 04A1DE2417C4FE4E00B87DED /* Build configuration list for PBXProject "Python-iOS-app" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 04A1DE2017C4FE4E00B87DED;
+			productRefGroup = 04A1DE2A17C4FE4E00B87DED /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				04A1DE2817C4FE4E00B87DED /* Python-iOS-app */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		04A1DE2717C4FE4E00B87DED /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				04A1DE3717C4FE4E00B87DED /* InfoPlist.strings in Resources */,
+				04A1DE3F17C4FE4E00B87DED /* Default.png in Resources */,
+				04A1DE4117C4FE4E00B87DED /* Default@2x.png in Resources */,
+				04A1DE4317C4FE4E00B87DED /* Default-568h@2x.png in Resources */,
+				04A1DE4917C4FE4E00B87DED /* ViewController_iPhone.xib in Resources */,
+				04A1DE4C17C4FE4E00B87DED /* ViewController_iPad.xib in Resources */,
+				04A1DE5817C501B300B87DED /* python in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		7F010F2EBC0C62356CD381C6 /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		E9BF48AF39E0329A2D6E86A2 /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Python-iOS-app/Pods-Python-iOS-app-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		04A1DE2517C4FE4E00B87DED /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				04A1DE3917C4FE4E00B87DED /* main.m in Sources */,
+				CE95DA3B1A71F4790086CD5C /* PythonRun.m in Sources */,
+				04A1DE3D17C4FE4E00B87DED /* AppDelegate.m in Sources */,
+				04A1DE4617C4FE4E00B87DED /* ViewController.m in Sources */,
+				CE95DA3E1A71FCD80086CD5C /* FCEditorViewController.m in Sources */,
+				CE95DAA01A721F560086CD5C /* FCSetting.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		04A1DE3517C4FE4E00B87DED /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				04A1DE3617C4FE4E00B87DED /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		04A1DE4717C4FE4E00B87DED /* ViewController_iPhone.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				04A1DE4817C4FE4E00B87DED /* en */,
+			);
+			name = ViewController_iPhone.xib;
+			sourceTree = "<group>";
+		};
+		04A1DE4A17C4FE4E00B87DED /* ViewController_iPad.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				04A1DE4B17C4FE4E00B87DED /* en */,
+			);
+			name = ViewController_iPad.xib;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		04A1DE4D17C4FE4E00B87DED /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				HEADER_SEARCH_PATHS = (
+					libPython,
+					libPython/Include,
+				);
+				IPHONEOS_DEPLOYMENT_TARGET = 6.1;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		04A1DE4E17C4FE4E00B87DED /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				HEADER_SEARCH_PATHS = (
+					libPython,
+					libPython/Include,
+				);
+				IPHONEOS_DEPLOYMENT_TARGET = 6.1;
+				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		04A1DE5017C4FE4E00B87DED /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = BA548A1AC8F2DD8408CEF35B /* Pods-Python-iOS-app.debug.xcconfig */;
+			buildSettings = {
+				CLANG_ENABLE_OBJC_ARC = YES;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Python-iOS-app/Python-iOS-app-Prefix.pch";
+				INFOPLIST_FILE = "Python-iOS-app/Python-iOS-app-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)/../../Library/Developer/Xcode/DerivedData/python-ios-eyuhldwtuimkzneexvqyamsdhzfq/Build/Products/Debug-iphoneos\"",
+					"$(PROJECT_DIR)/Python-iOS-app/libPython",
+				);
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		04A1DE5117C4FE4E00B87DED /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 74D104E83A5087014E54E52D /* Pods-Python-iOS-app.release.xcconfig */;
+			buildSettings = {
+				CLANG_ENABLE_OBJC_ARC = YES;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Python-iOS-app/Python-iOS-app-Prefix.pch";
+				INFOPLIST_FILE = "Python-iOS-app/Python-iOS-app-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)/../../Library/Developer/Xcode/DerivedData/python-ios-eyuhldwtuimkzneexvqyamsdhzfq/Build/Products/Debug-iphoneos\"",
+					"$(PROJECT_DIR)/Python-iOS-app/libPython",
+				);
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		04A1DE2417C4FE4E00B87DED /* Build configuration list for PBXProject "Python-iOS-app" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				04A1DE4D17C4FE4E00B87DED /* Debug */,
+				04A1DE4E17C4FE4E00B87DED /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		04A1DE4F17C4FE4E00B87DED /* Build configuration list for PBXNativeTarget "Python-iOS-app" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				04A1DE5017C4FE4E00B87DED /* Debug */,
+				04A1DE5117C4FE4E00B87DED /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 04A1DE2117C4FE4E00B87DED /* Project object */;
+}
