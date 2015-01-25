@@ -11,7 +11,6 @@
 #include "Python.h"
 #include "MBProgressHUD.h"
 #include "AMSmoothAlertView.h"
-#include "CRGradientNavigationBar.h"
 
 @interface FCEditorViewController ()
 
@@ -24,25 +23,22 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
-    UIColor *firstColor = [UIColor colorWithRed:0.0f/255.0f green:148.0f/255.0f blue:211.0f/255.0f alpha:1.0f];
-    UIColor *secondColor = [UIColor colorWithRed:66.0f/255.0f green:190.0f/255.0f blue:245.0f/255.0f alpha:1.0f];
-    NSArray *colors = [NSArray arrayWithObjects:firstColor, secondColor, nil];
-    [[CRGradientNavigationBar appearance] setBarTintGradientColors:colors];
+   
     
     UIBarButtonItem *runBI = [[UIBarButtonItem alloc] initWithTitle:@"Run" style:UIBarButtonItemStyleBordered target:self action:@selector(runClick)];
     UIBarButtonItem *clearBI = [[UIBarButtonItem alloc] initWithTitle:@"Clear" style:UIBarButtonItemStylePlain target:self action:@selector(clearClick)];
     
-    UINavigationItem *item = [[UINavigationItem alloc] initWithTitle:@"Python"];
-    item.rightBarButtonItems = @[clearBI,runBI];
-    CRGradientNavigationBar *bar = [[CRGradientNavigationBar alloc] initWithFrame:CGRectMake(0, 0, self.view.bounds.size.width, 50)];
-    [bar pushNavigationItem:item animated:YES];
-    [self.view addSubview:bar];
+    self.navigationItem.rightBarButtonItems = @[clearBI,runBI];
     
-    CGFloat ey = CGRectGetMaxY(bar.frame);
+    CGFloat ey = CGRectGetMaxY(self.navigationBar.frame);
     _editorView = [[UITextView alloc] initWithFrame:CGRectMake(0, ey, self.view.bounds.size.width, self.view.bounds.size.height - ey )];
     _editorView.editable=YES;
     _editorView.font = [UIFont systemFontOfSize:23];
     [self.view addSubview:_editorView];
+}
+
+-(NSString *)title{
+    return @"Python";
 }
 
 -(void)viewDidAppear:(BOOL)animated{

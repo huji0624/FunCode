@@ -55,7 +55,7 @@ _check_and_flush (FILE *stream)
     
     PyRun_SimpleString([_code cStringUsingEncoding:NSASCIIStringEncoding]);
     
-    int size=ftell(fakestderr);
+    long size=ftell(fakestderr);
     
     fclose(fakestdout);
     fclose(fakestderr);

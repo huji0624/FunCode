@@ -7,10 +7,11 @@
 //
 
 #import "ViewController.h"
-#import "FCEditorViewController.h"
+#import "MSDynamicsDrawerViewController.h"
+#import "FCMenuViewController.h"
 
 @interface ViewController ()
-
+@property (nonatomic,strong) MSDynamicsDrawerViewController *drawerController;
 @end
 
 @implementation ViewController
@@ -19,10 +20,23 @@
 {
     [super viewDidLoad];
 	// Do any additional setup after loading the view, typically from a nib.
+    self.drawerController = [[MSDynamicsDrawerViewController alloc] init];
+    self.drawerController.gravityMagnitude = 7.0f;
+    self.drawerController.elasticity = 0.0f;
+    self.drawerController.bounceElasticity = 0.0f;
+    [self.view addSubview:self.drawerController.view];
+    
+    [self.drawerController addStylersFromArray:@[[MSDynamicsDrawerScaleStyler styler], [MSDynamicsDrawerFadeStyler styler]] forDirection:MSDynamicsDrawerDirectionLeft];
+    
+    FCMenuViewController *menuVC = [[FCMenuViewController alloc] init];
+    menuVC.drawerController = self.drawerController;
+    [self.drawerController setDrawerViewController:menuVC forDirection:MSDynamicsDrawerDirectionLeft];
+    
+    [menuVC codeClick];
 }
 
 -(void)viewDidAppear:(BOOL)animated{
-    [self presentViewController:[[FCEditorViewController alloc] init] animated:YES completion:nil];
+   
 }
 
 - (void)didReceiveMemoryWarning

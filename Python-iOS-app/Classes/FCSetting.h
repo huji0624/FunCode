@@ -13,4 +13,6 @@
 +(instancetype)defaultSetting;
 
 @property (nonatomic,assign) CGFloat editorFontSize;
+@property (nonatomic,assign) CGFloat outPutFontSize;
+
 @end

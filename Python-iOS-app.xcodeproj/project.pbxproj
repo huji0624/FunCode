@@ -21,6 +21,12 @@
 		04A1DE4C17C4FE4E00B87DED /* ViewController_iPad.xib in Resources */ = {isa = PBXBuildFile; fileRef = 04A1DE4A17C4FE4E00B87DED /* ViewController_iPad.xib */; };
 		04A1DE5817C501B300B87DED /* python in Resources */ = {isa = PBXBuildFile; fileRef = 04A1DE5717C501B300B87DED /* python */; };
 		9685CF6B4355231DE7610D36 /* libPods-Python-iOS-app.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 4E03FB72C1789F6CF44CBA22 /* libPods-Python-iOS-app.a */; };
+		A58E52E91A74974D00C298C7 /* FCLessonContentManager.m in Sources */ = {isa = PBXBuildFile; fileRef = A58E52E81A74974D00C298C7 /* FCLessonContentManager.m */; };
+		A59176C41A74BD7700186F83 /* BasePaneViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A59176C31A74BD7700186F83 /* BasePaneViewController.m */; };
+		A59176C71A74C3B800186F83 /* FCMenuViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A59176C61A74C3B800186F83 /* FCMenuViewController.m */; };
+		A59176CE1A74C59800186F83 /* BaseWebViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A59176CD1A74C59800186F83 /* BaseWebViewController.m */; };
+		A59176D01A74C75B00186F83 /* WebResource in Resources */ = {isa = PBXBuildFile; fileRef = A59176CF1A74C75B00186F83 /* WebResource */; };
+		A59176D31A74E6CE00186F83 /* FCSettingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A59176D21A74E6CE00186F83 /* FCSettingViewController.m */; };
 		CE95DA3B1A71F4790086CD5C /* PythonRun.m in Sources */ = {isa = PBXBuildFile; fileRef = CE95DA3A1A71F4790086CD5C /* PythonRun.m */; };
 		CE95DA3E1A71FCD80086CD5C /* FCEditorViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CE95DA3D1A71FCD80086CD5C /* FCEditorViewController.m */; };
 		CE95DA9D1A7211450086CD5C /* liblibPython.a in Frameworks */ = {isa = PBXBuildFile; fileRef = CE95DA9B1A7211450086CD5C /* liblibPython.a */; };
@@ -41,13 +47,24 @@
 		04A1DE3E17C4FE4E00B87DED /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Default.png; sourceTree = "<group>"; };
 		04A1DE4017C4FE4E00B87DED /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default@2x.png"; sourceTree = "<group>"; };
 		04A1DE4217C4FE4E00B87DED /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
-		04A1DE4417C4FE4E00B87DED /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		04A1DE4517C4FE4E00B87DED /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		04A1DE4417C4FE4E00B87DED /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = ViewController.h; path = ../ViewController.h; sourceTree = "<group>"; };
+		04A1DE4517C4FE4E00B87DED /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = ViewController.m; path = ../ViewController.m; sourceTree = "<group>"; };
 		04A1DE4817C4FE4E00B87DED /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/ViewController_iPhone.xib; sourceTree = "<group>"; };
 		04A1DE4B17C4FE4E00B87DED /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/ViewController_iPad.xib; sourceTree = "<group>"; };
 		04A1DE5717C501B300B87DED /* python */ = {isa = PBXFileReference; lastKnownFileType = folder; name = python; path = "Python-iOS-app/python"; sourceTree = "<group>"; };
 		4E03FB72C1789F6CF44CBA22 /* libPods-Python-iOS-app.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Python-iOS-app.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		74D104E83A5087014E54E52D /* Pods-Python-iOS-app.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Python-iOS-app.release.xcconfig"; path = "Pods/Target Support Files/Pods-Python-iOS-app/Pods-Python-iOS-app.release.xcconfig"; sourceTree = "<group>"; };
+		A58E52E71A74974D00C298C7 /* FCLessonContentManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FCLessonContentManager.h; sourceTree = "<group>"; };
+		A58E52E81A74974D00C298C7 /* FCLessonContentManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FCLessonContentManager.m; sourceTree = "<group>"; };
+		A59176C21A74BD7700186F83 /* BasePaneViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BasePaneViewController.h; sourceTree = "<group>"; };
+		A59176C31A74BD7700186F83 /* BasePaneViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BasePaneViewController.m; sourceTree = "<group>"; };
+		A59176C51A74C3B800186F83 /* FCMenuViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FCMenuViewController.h; sourceTree = "<group>"; };
+		A59176C61A74C3B800186F83 /* FCMenuViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FCMenuViewController.m; sourceTree = "<group>"; };
+		A59176CC1A74C59800186F83 /* BaseWebViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BaseWebViewController.h; sourceTree = "<group>"; };
+		A59176CD1A74C59800186F83 /* BaseWebViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BaseWebViewController.m; sourceTree = "<group>"; };
+		A59176CF1A74C75B00186F83 /* WebResource */ = {isa = PBXFileReference; lastKnownFileType = folder; path = WebResource; sourceTree = "<group>"; };
+		A59176D11A74E6CE00186F83 /* FCSettingViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FCSettingViewController.h; sourceTree = "<group>"; };
+		A59176D21A74E6CE00186F83 /* FCSettingViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FCSettingViewController.m; sourceTree = "<group>"; };
 		BA548A1AC8F2DD8408CEF35B /* Pods-Python-iOS-app.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Python-iOS-app.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Python-iOS-app/Pods-Python-iOS-app.debug.xcconfig"; sourceTree = "<group>"; };
 		CE95DA391A71F4790086CD5C /* PythonRun.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PythonRun.h; sourceTree = "<group>"; };
 		CE95DA3A1A71F4790086CD5C /* PythonRun.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PythonRun.m; sourceTree = "<group>"; };
@@ -198,12 +215,11 @@
 		04A1DE3217C4FE4E00B87DED /* Python-iOS-app */ = {
 			isa = PBXGroup;
 			children = (
+				A59176CF1A74C75B00186F83 /* WebResource */,
 				CE95DA3F1A7211450086CD5C /* libPython */,
 				CE95DA381A71F4660086CD5C /* Classes */,
 				04A1DE3B17C4FE4E00B87DED /* AppDelegate.h */,
 				04A1DE3C17C4FE4E00B87DED /* AppDelegate.m */,
-				04A1DE4417C4FE4E00B87DED /* ViewController.h */,
-				04A1DE4517C4FE4E00B87DED /* ViewController.m */,
 				04A1DE4717C4FE4E00B87DED /* ViewController_iPhone.xib */,
 				04A1DE4A17C4FE4E00B87DED /* ViewController_iPad.xib */,
 				04A1DE3317C4FE4E00B87DED /* Supporting Files */,
@@ -242,15 +258,35 @@
 			name = Pods;
 			sourceTree = "<group>";
 		};
+		A59176CB1A74C56200186F83 /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				04A1DE4417C4FE4E00B87DED /* ViewController.h */,
+				04A1DE4517C4FE4E00B87DED /* ViewController.m */,
+				CE95DA3C1A71FCD80086CD5C /* FCEditorViewController.h */,
+				CE95DA3D1A71FCD80086CD5C /* FCEditorViewController.m */,
+				A59176C21A74BD7700186F83 /* BasePaneViewController.h */,
+				A59176C31A74BD7700186F83 /* BasePaneViewController.m */,
+				A59176C51A74C3B800186F83 /* FCMenuViewController.h */,
+				A59176C61A74C3B800186F83 /* FCMenuViewController.m */,
+				A59176CC1A74C59800186F83 /* BaseWebViewController.h */,
+				A59176CD1A74C59800186F83 /* BaseWebViewController.m */,
+				A59176D11A74E6CE00186F83 /* FCSettingViewController.h */,
+				A59176D21A74E6CE00186F83 /* FCSettingViewController.m */,
+			);
+			name = ViewControllers;
+			sourceTree = "<group>";
+		};
 		CE95DA381A71F4660086CD5C /* Classes */ = {
 			isa = PBXGroup;
 			children = (
+				A59176CB1A74C56200186F83 /* ViewControllers */,
 				CE95DA391A71F4790086CD5C /* PythonRun.h */,
 				CE95DA3A1A71F4790086CD5C /* PythonRun.m */,
-				CE95DA3C1A71FCD80086CD5C /* FCEditorViewController.h */,
-				CE95DA3D1A71FCD80086CD5C /* FCEditorViewController.m */,
 				CE95DA9E1A721F560086CD5C /* FCSetting.h */,
 				CE95DA9F1A721F560086CD5C /* FCSetting.m */,
+				A58E52E71A74974D00C298C7 /* FCLessonContentManager.h */,
+				A58E52E81A74974D00C298C7 /* FCLessonContentManager.m */,
 			);
 			path = Classes;
 			sourceTree = "<group>";
@@ -416,6 +452,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				04A1DE3717C4FE4E00B87DED /* InfoPlist.strings in Resources */,
+				A59176D01A74C75B00186F83 /* WebResource in Resources */,
 				04A1DE3F17C4FE4E00B87DED /* Default.png in Resources */,
 				04A1DE4117C4FE4E00B87DED /* Default@2x.png in Resources */,
 				04A1DE4317C4FE4E00B87DED /* Default-568h@2x.png in Resources */,
@@ -466,10 +503,15 @@
 			buildActionMask = 2147483647;
 			files = (
 				04A1DE3917C4FE4E00B87DED /* main.m in Sources */,
+				A59176C41A74BD7700186F83 /* BasePaneViewController.m in Sources */,
+				A59176C71A74C3B800186F83 /* FCMenuViewController.m in Sources */,
 				CE95DA3B1A71F4790086CD5C /* PythonRun.m in Sources */,
 				04A1DE3D17C4FE4E00B87DED /* AppDelegate.m in Sources */,
 				04A1DE4617C4FE4E00B87DED /* ViewController.m in Sources */,
+				A59176CE1A74C59800186F83 /* BaseWebViewController.m in Sources */,
+				A59176D31A74E6CE00186F83 /* FCSettingViewController.m in Sources */,
 				CE95DA3E1A71FCD80086CD5C /* FCEditorViewController.m in Sources */,
+				A58E52E91A74974D00C298C7 /* FCLessonContentManager.m in Sources */,
 				CE95DAA01A721F560086CD5C /* FCSetting.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
