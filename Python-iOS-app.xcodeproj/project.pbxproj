@@ -31,6 +31,10 @@
 		CE95DA3E1A71FCD80086CD5C /* FCEditorViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CE95DA3D1A71FCD80086CD5C /* FCEditorViewController.m */; };
 		CE95DA9D1A7211450086CD5C /* liblibPython.a in Frameworks */ = {isa = PBXBuildFile; fileRef = CE95DA9B1A7211450086CD5C /* liblibPython.a */; };
 		CE95DAA01A721F560086CD5C /* FCSetting.m in Sources */ = {isa = PBXBuildFile; fileRef = CE95DA9F1A721F560086CD5C /* FCSetting.m */; };
+		CE95DAA41A7615B70086CD5C /* CCAlertView.m in Sources */ = {isa = PBXBuildFile; fileRef = CE95DAA31A7615B70086CD5C /* CCAlertView.m */; };
+		CE95DAA81A7616CB0086CD5C /* FCLesson.m in Sources */ = {isa = PBXBuildFile; fileRef = CE95DAA71A7616CB0086CD5C /* FCLesson.m */; };
+		CE95DAAB1A761F770086CD5C /* FCLessonViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CE95DAAA1A761F770086CD5C /* FCLessonViewController.m */; };
+		CE95DAAE1A7622AB0086CD5C /* FCCache.m in Sources */ = {isa = PBXBuildFile; fileRef = CE95DAAD1A7622AB0086CD5C /* FCCache.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -164,6 +168,14 @@
 		CE95DA9C1A7211450086CD5C /* pyconfig.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = pyconfig.h; sourceTree = "<group>"; };
 		CE95DA9E1A721F560086CD5C /* FCSetting.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FCSetting.h; sourceTree = "<group>"; };
 		CE95DA9F1A721F560086CD5C /* FCSetting.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FCSetting.m; sourceTree = "<group>"; };
+		CE95DAA21A7615B70086CD5C /* CCAlertView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CCAlertView.h; sourceTree = "<group>"; };
+		CE95DAA31A7615B70086CD5C /* CCAlertView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CCAlertView.m; sourceTree = "<group>"; };
+		CE95DAA61A7616CB0086CD5C /* FCLesson.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FCLesson.h; sourceTree = "<group>"; };
+		CE95DAA71A7616CB0086CD5C /* FCLesson.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FCLesson.m; sourceTree = "<group>"; };
+		CE95DAA91A761F770086CD5C /* FCLessonViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FCLessonViewController.h; sourceTree = "<group>"; };
+		CE95DAAA1A761F770086CD5C /* FCLessonViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FCLessonViewController.m; sourceTree = "<group>"; };
+		CE95DAAC1A7622AB0086CD5C /* FCCache.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FCCache.h; sourceTree = "<group>"; };
+		CE95DAAD1A7622AB0086CD5C /* FCCache.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FCCache.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -273,6 +285,8 @@
 				A59176CD1A74C59800186F83 /* BaseWebViewController.m */,
 				A59176D11A74E6CE00186F83 /* FCSettingViewController.h */,
 				A59176D21A74E6CE00186F83 /* FCSettingViewController.m */,
+				CE95DAA91A761F770086CD5C /* FCLessonViewController.h */,
+				CE95DAAA1A761F770086CD5C /* FCLessonViewController.m */,
 			);
 			name = ViewControllers;
 			sourceTree = "<group>";
@@ -280,13 +294,11 @@
 		CE95DA381A71F4660086CD5C /* Classes */ = {
 			isa = PBXGroup;
 			children = (
+				CE95DAA51A7616950086CD5C /* FCLesson */,
+				CE95DAA11A7615A60086CD5C /* Util */,
 				A59176CB1A74C56200186F83 /* ViewControllers */,
-				CE95DA391A71F4790086CD5C /* PythonRun.h */,
-				CE95DA3A1A71F4790086CD5C /* PythonRun.m */,
 				CE95DA9E1A721F560086CD5C /* FCSetting.h */,
 				CE95DA9F1A721F560086CD5C /* FCSetting.m */,
-				A58E52E71A74974D00C298C7 /* FCLessonContentManager.h */,
-				A58E52E81A74974D00C298C7 /* FCLessonContentManager.m */,
 			);
 			path = Classes;
 			sourceTree = "<group>";
@@ -398,6 +410,30 @@
 			path = Include;
 			sourceTree = "<group>";
 		};
+		CE95DAA11A7615A60086CD5C /* Util */ = {
+			isa = PBXGroup;
+			children = (
+				CE95DA391A71F4790086CD5C /* PythonRun.h */,
+				CE95DA3A1A71F4790086CD5C /* PythonRun.m */,
+				CE95DAA21A7615B70086CD5C /* CCAlertView.h */,
+				CE95DAA31A7615B70086CD5C /* CCAlertView.m */,
+				CE95DAAC1A7622AB0086CD5C /* FCCache.h */,
+				CE95DAAD1A7622AB0086CD5C /* FCCache.m */,
+			);
+			name = Util;
+			sourceTree = "<group>";
+		};
+		CE95DAA51A7616950086CD5C /* FCLesson */ = {
+			isa = PBXGroup;
+			children = (
+				A58E52E71A74974D00C298C7 /* FCLessonContentManager.h */,
+				A58E52E81A74974D00C298C7 /* FCLessonContentManager.m */,
+				CE95DAA61A7616CB0086CD5C /* FCLesson.h */,
+				CE95DAA71A7616CB0086CD5C /* FCLesson.m */,
+			);
+			name = FCLesson;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -507,10 +543,14 @@
 				A59176C71A74C3B800186F83 /* FCMenuViewController.m in Sources */,
 				CE95DA3B1A71F4790086CD5C /* PythonRun.m in Sources */,
 				04A1DE3D17C4FE4E00B87DED /* AppDelegate.m in Sources */,
+				CE95DAAE1A7622AB0086CD5C /* FCCache.m in Sources */,
+				CE95DAAB1A761F770086CD5C /* FCLessonViewController.m in Sources */,
 				04A1DE4617C4FE4E00B87DED /* ViewController.m in Sources */,
 				A59176CE1A74C59800186F83 /* BaseWebViewController.m in Sources */,
 				A59176D31A74E6CE00186F83 /* FCSettingViewController.m in Sources */,
 				CE95DA3E1A71FCD80086CD5C /* FCEditorViewController.m in Sources */,
+				CE95DAA81A7616CB0086CD5C /* FCLesson.m in Sources */,
+				CE95DAA41A7615B70086CD5C /* CCAlertView.m in Sources */,
 				A58E52E91A74974D00C298C7 /* FCLessonContentManager.m in Sources */,
 				CE95DAA01A721F560086CD5C /* FCSetting.m in Sources */,
 			);

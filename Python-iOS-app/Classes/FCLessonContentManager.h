@@ -7,6 +7,7 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "FCLesson.h"
 
 @interface FCLessonContentManager : NSObject
 +(instancetype)defaultManager;
@@ -14,5 +15,8 @@
 -(void)deployPackingLesson;
 
 -(NSURL*)loadRootHtmlPage:(NSString*)name;
+
+-(FCLesson*)lesson:(NSUInteger)lesson;
+-(NSUInteger)maxLesson;
 
 @end

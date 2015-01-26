@@ -12,6 +12,7 @@
 #import "BaseWebViewController.h"
 #import "FCLessonContentManager.h"
 #import "FCSettingViewController.h"
+#import "FCLessonViewController.h"
 
 @interface FCMenuViewController ()
 
@@ -20,13 +21,15 @@
 @implementation FCMenuViewController{
     NSArray *_rowArray;
     FCEditorViewController *_editorVC;
+    FCLessonViewController *_lessonVC;
 }
 
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
     _rowArray = @[
-                  @[@"Code",@"codeClick"],
+                  @[@"Lesson",@"lessonClick"],
+                  @[@"FreeCode",@"freeCodeClick"],
                   @[@"Setting",@"setClick"],
                   @[@"About",@"aboutClick"]
                 ];
@@ -37,11 +40,18 @@
     // Dispose of any resources that can be recreated.
 }
 
--(void)codeClick{
+-(void)freeCodeClick{
     if (!_editorVC) {
         _editorVC = [[FCEditorViewController alloc] init];
     }
     [self setPaneViewController:_editorVC];
+}
+
+-(void)lessonClick{
+    if (!_lessonVC) {
+        _lessonVC = [[FCLessonViewController alloc] init];
+    }
+    [self setPaneViewController:_lessonVC];
 }
 
 -(void)setClick{

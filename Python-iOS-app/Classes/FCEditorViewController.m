@@ -18,13 +18,13 @@
 
 @implementation FCEditorViewController{
     UITextView *_editorView;
+    UIWebView *_lessonWebView;
+    UIView *_backGroundView;
 }
 
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
-   
-    
     UIBarButtonItem *runBI = [[UIBarButtonItem alloc] initWithTitle:@"Run" style:UIBarButtonItemStyleBordered target:self action:@selector(runClick)];
     UIBarButtonItem *clearBI = [[UIBarButtonItem alloc] initWithTitle:@"Clear" style:UIBarButtonItemStylePlain target:self action:@selector(clearClick)];
     
@@ -35,6 +35,65 @@
     _editorView.editable=YES;
     _editorView.font = [UIFont systemFontOfSize:23];
     [self.view addSubview:_editorView];
+    
+    if (self.mode==FCEditorMode_Lesson) {
+        [self layoutLessonViews];
+    }
+}
+
+-(void)layoutLessonViews{
+    UIBarButtonItem *backBI = [[UIBarButtonItem alloc] initWithTitle:@"Back" style:UIBarButtonItemStyleBordered target:self action:@selector(backClick)];
+    UIBarButtonItem *lessonBI = [[UIBarButtonItem alloc] initWithTitle:@"Lesson" style:UIBarButtonItemStyleBordered target:self action:@selector(lessonClick)];
+    self.navigationItem.leftBarButtonItems = @[backBI,lessonBI];
+    
+    [self showLessonView:NO];
+}
+
+-(void)lessonClick{
+    [self showLessonView:!_lessonWebView.hidden];
+}
+
+-(void)showLessonView:(BOOL)hidden{
+    
+    if (hidden) {
+        _lessonWebView.hidden=YES;
+        _backGroundView.hidden=YES;
+    }else{
+        if (_lessonWebView) {
+            _lessonWebView.hidden=NO;
+            _backGroundView.hidden=NO;
+        }else{
+            MBProgressHUD *hud = [MBProgressHUD showHUDAddedTo:self.view animated:YES];
+            hud.mode = MBProgressHUDModeIndeterminate;
+            hud.labelText = @"Loading Lesson";
+            dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
+                NSError *err = nil;
+                NSString *lesson_ = [NSString stringWithContentsOfFile:self.lesson.content.absoluteString encoding:NSUTF8StringEncoding error:&err];
+                if (err) NSLog(@"%@",[err description]);
+                
+                dispatch_sync(dispatch_get_main_queue(), ^{
+                    [hud hide:YES];
+                    
+                    if (!_lessonWebView) {
+                        _backGroundView = [[UIView alloc] initWithFrame:_editorView.frame];
+                        _backGroundView.backgroundColor = [UIColor blackColor];
+                        _backGroundView.alpha = 0.3;
+                        [self.view addSubview:_backGroundView];
+                        CGSize size = _backGroundView.bounds.size;
+                        _lessonWebView = [[UIWebView alloc] initWithFrame:CGRectMake(0, 0, size.width/3*2, size.height/4*3)];
+                        [_lessonWebView loadHTMLString:lesson_ baseURL:nil];
+                        _lessonWebView.center = CGPointMake(CGRectGetMidX(_backGroundView.frame), CGRectGetMidY(_backGroundView.frame));
+                        [self.view addSubview:_lessonWebView];
+                    }
+                    
+                });
+            });
+        }
+    }
+}
+
+-(void)backClick{
+    [self dismissViewControllerAnimated:YES completion:nil];
 }
 
 -(NSString *)title{
@@ -72,26 +131,52 @@
 -(void)runClick{
     [_editorView resignFirstResponder];
     
-    PythonRun *run = [[PythonRun alloc] initWithCode:_editorView.text];
-    
     MBProgressHUD *hud = [MBProgressHUD showHUDAddedTo:self.view animated:YES];
     hud.mode = MBProgressHUDModeIndeterminate;
     hud.labelText = @"Running Python";
     dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
         
+        NSMutableString *allcode = [NSMutableString string];
+        
+        if ([[NSFileManager defaultManager] fileExistsAtPath:self.lesson.inputPython.absoluteString]) {
+            NSString *input = [NSString stringWithContentsOfFile:self.lesson.inputPython.absoluteString encoding:NSUTF8StringEncoding error:nil];
+            [allcode appendString:input];
+            [allcode appendString:@"\n"];
+        }
+        
+        [allcode appendString:_editorView.text];
+        
+        PythonRun *run = [[PythonRun alloc] initWithCode:allcode];
         NSString* info = [run run];
         NSString* err = [run err];
+        
+        NSString *answer = [NSString stringWithContentsOfFile:self.lesson.outPutAnswer.absoluteString encoding:NSUTF8StringEncoding error:nil];
+        if (!answer) {
+            assert("no answer");
+        }
         
         dispatch_sync(dispatch_get_main_queue(), ^{
             [hud hide:YES];
             
-            if (err) {
-                AMSmoothAlertView *alert = [[AMSmoothAlertView alloc] initDropAlertWithTitle:@"Oops!" andText:err andCancelButton:NO forAlertType:AlertFailure];
-                [alert show];
-            }else{
+            if (self.mode==FCEditorMode_Free) {
                 AMSmoothAlertView *alert = [[AMSmoothAlertView alloc] initDropAlertWithTitle:@"OutPut:" andText:info andCancelButton:NO forAlertType:AlertInfo];
                 [alert show];
+            }else if(self.mode==FCEditorMode_Lesson){
+                if (err) {
+                    AMSmoothAlertView *alert = [[AMSmoothAlertView alloc] initDropAlertWithTitle:@"Oops!" andText:err andCancelButton:NO forAlertType:AlertFailure];
+                    [alert show];
+                }else{
+                    if ([info isEqualToString:answer]) {
+                        AMSmoothAlertView *alert = [[AMSmoothAlertView alloc] initDropAlertWithTitle:@"YES" andText:info andCancelButton:NO forAlertType:AlertSuccess];
+                        [alert show];
+                    }else{
+                        AMSmoothAlertView *alert = [[AMSmoothAlertView alloc] initDropAlertWithTitle:@"NO" andText:info andCancelButton:NO forAlertType:AlertFailure];
+                        [alert show];
+                    }
+                }
             }
+            
+            
         });
     });
 }

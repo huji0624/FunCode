@@ -11,5 +11,5 @@
 @interface FCMenuViewController : UITableViewController
 @property (nonatomic,weak) MSDynamicsDrawerViewController *drawerController;
 
--(void)codeClick;
+-(void)lessonClick;
 @end

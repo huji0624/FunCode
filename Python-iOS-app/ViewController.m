@@ -32,7 +32,7 @@
     menuVC.drawerController = self.drawerController;
     [self.drawerController setDrawerViewController:menuVC forDirection:MSDynamicsDrawerDirectionLeft];
     
-    [menuVC codeClick];
+    [menuVC lessonClick];
 }
 
 -(void)viewDidAppear:(BOOL)animated{
