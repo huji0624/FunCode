@@ -12,7 +12,7 @@
 #import "FCLessonContentManager.h"
 
 
-@interface FCLessonViewController ()<UITableViewDataSource,UITableViewDelegate>
+@interface FCLessonViewController ()<UITableViewDataSource,UITableViewDelegate,FCEditorViewControllerDelegate>
 
 @end
 
@@ -54,9 +54,16 @@
     FCEditorViewController *edVC = [[FCEditorViewController alloc] init];
     edVC.lesson = [[FCLessonContentManager defaultManager] lesson:indexPath.row];
     edVC.mode = FCEditorMode_Lesson;
+    edVC.delegate=self;
     [[UIApplication sharedApplication].keyWindow.rootViewController presentViewController:edVC animated:YES completion:^{
         
     }];
+}
+
+-(void)didPassLesson:(FCLesson *)lesson{
+    [[FCCache defaultCache] setObject:@(lesson.lessonIndex+1) forKey:FCCache_Key_CurrentLesson];
+    [[FCCache defaultCache] flush];
+    [_lessonTableView reloadData];
 }
 
 -(NSInteger)numberOfSectionsInTableView:(UITableView *)tableView{
@@ -68,7 +75,7 @@
 }
 
 -(NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section{
-    return [self currentLesson] + 2;
+    return [self currentLesson] + 1;
 }
 
 -(UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{

@@ -168,6 +168,11 @@
                 }else{
                     if ([info isEqualToString:answer]) {
                         AMSmoothAlertView *alert = [[AMSmoothAlertView alloc] initDropAlertWithTitle:@"YES" andText:info andCancelButton:NO forAlertType:AlertSuccess];
+                        alert.completionBlock = ^(AMSmoothAlertView *sal, UIButton *bt){
+                            [self dismissViewControllerAnimated:YES completion:^{
+                                [self.delegate didPassLesson:self.lesson];
+                            }];
+                        };
                         [alert show];
                     }else{
                         AMSmoothAlertView *alert = [[AMSmoothAlertView alloc] initDropAlertWithTitle:@"NO" andText:info andCancelButton:NO forAlertType:AlertFailure];

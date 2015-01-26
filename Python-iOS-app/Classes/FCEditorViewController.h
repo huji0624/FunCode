@@ -13,7 +13,12 @@ typedef NS_ENUM(NSInteger, FCEditorMode) {
     FCEditorMode_Lesson,
 };
 
+@protocol FCEditorViewControllerDelegate <NSObject>
+-(void)didPassLesson:(FCLesson*)lesson;
+@end
+
 @interface FCEditorViewController : BasePaneViewController
 @property (nonatomic,assign) FCEditorMode mode;
 @property (nonatomic,strong) FCLesson *lesson;
+@property (nonatomic,weak) id<FCEditorViewControllerDelegate> delegate;
 @end

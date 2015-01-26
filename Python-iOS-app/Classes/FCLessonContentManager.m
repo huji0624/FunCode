@@ -38,8 +38,9 @@ static FCLessonContentManager *_instance = nil;
 }
 
 -(FCLesson *)lesson:(NSUInteger)lesson{
-    NSString *dirpath = [[self rootLessonDir] stringByAppendingFormat:@"/lesson%d",lesson];
+    NSString *dirpath = [[self rootLessonDir] stringByAppendingFormat:@"/lesson%@",@(lesson)];
     FCLesson *les_ = [[FCLesson alloc] init];
+    les_.lessonIndex = lesson;
     les_.content = [NSURL URLWithString:[dirpath stringByAppendingPathComponent:@"content.html"]];
     les_.inputPython = [NSURL URLWithString:[dirpath stringByAppendingPathComponent:@"input.py"]];
     les_.outPutAnswer = [NSURL URLWithString:[dirpath stringByAppendingPathComponent:@"output.txt"]];
@@ -54,7 +55,7 @@ static FCLessonContentManager *_instance = nil;
 //    NSArray *paths = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES);
 //    NSString *rootDocDir = [paths objectAtIndex:0];
     NSString *rootDocDir = [[NSBundle mainBundle] bundlePath];
-    return [rootDocDir stringByAppendingPathComponent:@"WebResource"];
+    return [rootDocDir stringByAppendingPathComponent:@"WebResource/en"];
 }
 
 -(NSURL *)loadRootHtmlPage:(NSString *)name{
