@@ -10,15 +10,12 @@
 		04A1DE2D17C4FE4E00B87DED /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 04A1DE2C17C4FE4E00B87DED /* UIKit.framework */; };
 		04A1DE2F17C4FE4E00B87DED /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 04A1DE2E17C4FE4E00B87DED /* Foundation.framework */; };
 		04A1DE3117C4FE4E00B87DED /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 04A1DE3017C4FE4E00B87DED /* CoreGraphics.framework */; };
-		04A1DE3717C4FE4E00B87DED /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 04A1DE3517C4FE4E00B87DED /* InfoPlist.strings */; };
 		04A1DE3917C4FE4E00B87DED /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 04A1DE3817C4FE4E00B87DED /* main.m */; };
 		04A1DE3D17C4FE4E00B87DED /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 04A1DE3C17C4FE4E00B87DED /* AppDelegate.m */; };
 		04A1DE3F17C4FE4E00B87DED /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = 04A1DE3E17C4FE4E00B87DED /* Default.png */; };
 		04A1DE4117C4FE4E00B87DED /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 04A1DE4017C4FE4E00B87DED /* Default@2x.png */; };
 		04A1DE4317C4FE4E00B87DED /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 04A1DE4217C4FE4E00B87DED /* Default-568h@2x.png */; };
 		04A1DE4617C4FE4E00B87DED /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 04A1DE4517C4FE4E00B87DED /* ViewController.m */; };
-		04A1DE4917C4FE4E00B87DED /* ViewController_iPhone.xib in Resources */ = {isa = PBXBuildFile; fileRef = 04A1DE4717C4FE4E00B87DED /* ViewController_iPhone.xib */; };
-		04A1DE4C17C4FE4E00B87DED /* ViewController_iPad.xib in Resources */ = {isa = PBXBuildFile; fileRef = 04A1DE4A17C4FE4E00B87DED /* ViewController_iPad.xib */; };
 		04A1DE5817C501B300B87DED /* python in Resources */ = {isa = PBXBuildFile; fileRef = 04A1DE5717C501B300B87DED /* python */; };
 		9685CF6B4355231DE7610D36 /* libPods-Python-iOS-app.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 4E03FB72C1789F6CF44CBA22 /* libPods-Python-iOS-app.a */; };
 		A58E52E91A74974D00C298C7 /* FCLessonContentManager.m in Sources */ = {isa = PBXBuildFile; fileRef = A58E52E81A74974D00C298C7 /* FCLessonContentManager.m */; };
@@ -35,6 +32,7 @@
 		CE95DAA81A7616CB0086CD5C /* FCLesson.m in Sources */ = {isa = PBXBuildFile; fileRef = CE95DAA71A7616CB0086CD5C /* FCLesson.m */; };
 		CE95DAAB1A761F770086CD5C /* FCLessonViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CE95DAAA1A761F770086CD5C /* FCLessonViewController.m */; };
 		CE95DAAE1A7622AB0086CD5C /* FCCache.m in Sources */ = {isa = PBXBuildFile; fileRef = CE95DAAD1A7622AB0086CD5C /* FCCache.m */; };
+		CE95DAB21A7764230086CD5C /* FXForms.m in Sources */ = {isa = PBXBuildFile; fileRef = CE95DAB11A7764230086CD5C /* FXForms.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -43,7 +41,6 @@
 		04A1DE2E17C4FE4E00B87DED /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		04A1DE3017C4FE4E00B87DED /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
 		04A1DE3417C4FE4E00B87DED /* Python-iOS-app-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Python-iOS-app-Info.plist"; sourceTree = "<group>"; };
-		04A1DE3617C4FE4E00B87DED /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		04A1DE3817C4FE4E00B87DED /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		04A1DE3A17C4FE4E00B87DED /* Python-iOS-app-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Python-iOS-app-Prefix.pch"; sourceTree = "<group>"; };
 		04A1DE3B17C4FE4E00B87DED /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -53,8 +50,6 @@
 		04A1DE4217C4FE4E00B87DED /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
 		04A1DE4417C4FE4E00B87DED /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = ViewController.h; path = ../ViewController.h; sourceTree = "<group>"; };
 		04A1DE4517C4FE4E00B87DED /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = ViewController.m; path = ../ViewController.m; sourceTree = "<group>"; };
-		04A1DE4817C4FE4E00B87DED /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/ViewController_iPhone.xib; sourceTree = "<group>"; };
-		04A1DE4B17C4FE4E00B87DED /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/ViewController_iPad.xib; sourceTree = "<group>"; };
 		04A1DE5717C501B300B87DED /* python */ = {isa = PBXFileReference; lastKnownFileType = folder; name = python; path = "Python-iOS-app/python"; sourceTree = "<group>"; };
 		4E03FB72C1789F6CF44CBA22 /* libPods-Python-iOS-app.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Python-iOS-app.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		74D104E83A5087014E54E52D /* Pods-Python-iOS-app.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Python-iOS-app.release.xcconfig"; path = "Pods/Target Support Files/Pods-Python-iOS-app/Pods-Python-iOS-app.release.xcconfig"; sourceTree = "<group>"; };
@@ -176,6 +171,8 @@
 		CE95DAAA1A761F770086CD5C /* FCLessonViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FCLessonViewController.m; sourceTree = "<group>"; };
 		CE95DAAC1A7622AB0086CD5C /* FCCache.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FCCache.h; sourceTree = "<group>"; };
 		CE95DAAD1A7622AB0086CD5C /* FCCache.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FCCache.m; sourceTree = "<group>"; };
+		CE95DAB01A7764230086CD5C /* FXForms.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FXForms.h; sourceTree = "<group>"; };
+		CE95DAB11A7764230086CD5C /* FXForms.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FXForms.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -197,6 +194,7 @@
 		04A1DE2017C4FE4E00B87DED = {
 			isa = PBXGroup;
 			children = (
+				CE95DAB41A7799BE0086CD5C /* Resource */,
 				04A1DE5617C500B500B87DED /* Bundles */,
 				04A1DE3217C4FE4E00B87DED /* Python-iOS-app */,
 				04A1DE2B17C4FE4E00B87DED /* Frameworks */,
@@ -232,8 +230,6 @@
 				CE95DA381A71F4660086CD5C /* Classes */,
 				04A1DE3B17C4FE4E00B87DED /* AppDelegate.h */,
 				04A1DE3C17C4FE4E00B87DED /* AppDelegate.m */,
-				04A1DE4717C4FE4E00B87DED /* ViewController_iPhone.xib */,
-				04A1DE4A17C4FE4E00B87DED /* ViewController_iPad.xib */,
 				04A1DE3317C4FE4E00B87DED /* Supporting Files */,
 			);
 			path = "Python-iOS-app";
@@ -243,7 +239,6 @@
 			isa = PBXGroup;
 			children = (
 				04A1DE3417C4FE4E00B87DED /* Python-iOS-app-Info.plist */,
-				04A1DE3517C4FE4E00B87DED /* InfoPlist.strings */,
 				04A1DE3817C4FE4E00B87DED /* main.m */,
 				04A1DE3A17C4FE4E00B87DED /* Python-iOS-app-Prefix.pch */,
 				04A1DE3E17C4FE4E00B87DED /* Default.png */,
@@ -283,8 +278,6 @@
 				A59176C61A74C3B800186F83 /* FCMenuViewController.m */,
 				A59176CC1A74C59800186F83 /* BaseWebViewController.h */,
 				A59176CD1A74C59800186F83 /* BaseWebViewController.m */,
-				A59176D11A74E6CE00186F83 /* FCSettingViewController.h */,
-				A59176D21A74E6CE00186F83 /* FCSettingViewController.m */,
 				CE95DAA91A761F770086CD5C /* FCLessonViewController.h */,
 				CE95DAAA1A761F770086CD5C /* FCLessonViewController.m */,
 			);
@@ -294,11 +287,10 @@
 		CE95DA381A71F4660086CD5C /* Classes */ = {
 			isa = PBXGroup;
 			children = (
+				CE95DAB31A7764370086CD5C /* Setting */,
 				CE95DAA51A7616950086CD5C /* FCLesson */,
 				CE95DAA11A7615A60086CD5C /* Util */,
 				A59176CB1A74C56200186F83 /* ViewControllers */,
-				CE95DA9E1A721F560086CD5C /* FCSetting.h */,
-				CE95DA9F1A721F560086CD5C /* FCSetting.m */,
 			);
 			path = Classes;
 			sourceTree = "<group>";
@@ -434,6 +426,35 @@
 			name = FCLesson;
 			sourceTree = "<group>";
 		};
+		CE95DAAF1A7764230086CD5C /* FXForms */ = {
+			isa = PBXGroup;
+			children = (
+				CE95DAB01A7764230086CD5C /* FXForms.h */,
+				CE95DAB11A7764230086CD5C /* FXForms.m */,
+			);
+			path = FXForms;
+			sourceTree = "<group>";
+		};
+		CE95DAB31A7764370086CD5C /* Setting */ = {
+			isa = PBXGroup;
+			children = (
+				A59176D11A74E6CE00186F83 /* FCSettingViewController.h */,
+				A59176D21A74E6CE00186F83 /* FCSettingViewController.m */,
+				CE95DAAF1A7764230086CD5C /* FXForms */,
+				CE95DA9E1A721F560086CD5C /* FCSetting.h */,
+				CE95DA9F1A721F560086CD5C /* FCSetting.m */,
+			);
+			name = Setting;
+			sourceTree = "<group>";
+		};
+		CE95DAB41A7799BE0086CD5C /* Resource */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Resource;
+			path = "Python-iOS-app/Resource";
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -470,7 +491,6 @@
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
 			knownRegions = (
-				en,
 			);
 			mainGroup = 04A1DE2017C4FE4E00B87DED;
 			productRefGroup = 04A1DE2A17C4FE4E00B87DED /* Products */;
@@ -487,13 +507,10 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				04A1DE3717C4FE4E00B87DED /* InfoPlist.strings in Resources */,
 				A59176D01A74C75B00186F83 /* WebResource in Resources */,
 				04A1DE3F17C4FE4E00B87DED /* Default.png in Resources */,
 				04A1DE4117C4FE4E00B87DED /* Default@2x.png in Resources */,
 				04A1DE4317C4FE4E00B87DED /* Default-568h@2x.png in Resources */,
-				04A1DE4917C4FE4E00B87DED /* ViewController_iPhone.xib in Resources */,
-				04A1DE4C17C4FE4E00B87DED /* ViewController_iPad.xib in Resources */,
 				04A1DE5817C501B300B87DED /* python in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -547,6 +564,7 @@
 				CE95DAAB1A761F770086CD5C /* FCLessonViewController.m in Sources */,
 				04A1DE4617C4FE4E00B87DED /* ViewController.m in Sources */,
 				A59176CE1A74C59800186F83 /* BaseWebViewController.m in Sources */,
+				CE95DAB21A7764230086CD5C /* FXForms.m in Sources */,
 				A59176D31A74E6CE00186F83 /* FCSettingViewController.m in Sources */,
 				CE95DA3E1A71FCD80086CD5C /* FCEditorViewController.m in Sources */,
 				CE95DAA81A7616CB0086CD5C /* FCLesson.m in Sources */,
@@ -557,33 +575,6 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
-
-/* Begin PBXVariantGroup section */
-		04A1DE3517C4FE4E00B87DED /* InfoPlist.strings */ = {
-			isa = PBXVariantGroup;
-			children = (
-				04A1DE3617C4FE4E00B87DED /* en */,
-			);
-			name = InfoPlist.strings;
-			sourceTree = "<group>";
-		};
-		04A1DE4717C4FE4E00B87DED /* ViewController_iPhone.xib */ = {
-			isa = PBXVariantGroup;
-			children = (
-				04A1DE4817C4FE4E00B87DED /* en */,
-			);
-			name = ViewController_iPhone.xib;
-			sourceTree = "<group>";
-		};
-		04A1DE4A17C4FE4E00B87DED /* ViewController_iPad.xib */ = {
-			isa = PBXVariantGroup;
-			children = (
-				04A1DE4B17C4FE4E00B87DED /* en */,
-			);
-			name = ViewController_iPad.xib;
-			sourceTree = "<group>";
-		};
-/* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
 		04A1DE4D17C4FE4E00B87DED /* Debug */ = {

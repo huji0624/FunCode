@@ -7,16 +7,25 @@
 //
 
 #import "FCSettingViewController.h"
+#import "FCSetting.h"
 
 @interface FCSettingViewController ()
 
 @end
 
-@implementation FCSettingViewController
+@implementation FCSettingViewController{
+    FXFormViewController *_fxViewController;
+}
 
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
+    
+    CGFloat ey = CGRectGetMaxY(self.navigationBar.frame);
+    _fxViewController = [[FXFormViewController alloc] init];
+    _fxViewController.formController.form = [[FCSetting alloc] init];
+    _fxViewController.view.frame = CGRectMake(0, ey, self.view.bounds.size.width, self.view.bounds.size.height-ey);
+    [self.view addSubview:_fxViewController.view];
 }
 
 -(NSString *)title{

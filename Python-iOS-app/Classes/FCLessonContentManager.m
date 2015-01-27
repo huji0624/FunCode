@@ -47,6 +47,12 @@ static FCLessonContentManager *_instance = nil;
     return les_;
 }
 
+-(NSURL *)baseURL{
+    NSString *rootDocDir = [[NSBundle mainBundle] bundlePath];
+    return [NSURL URLWithString:[rootDocDir stringByAppendingPathComponent:@"WebResource"]];
+//    return nil;
+}
+
 -(NSString*)rootLessonDir{
     return [[self rootDirPath] stringByAppendingFormat:@"/lessons"];
 }
@@ -55,7 +61,7 @@ static FCLessonContentManager *_instance = nil;
 //    NSArray *paths = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES);
 //    NSString *rootDocDir = [paths objectAtIndex:0];
     NSString *rootDocDir = [[NSBundle mainBundle] bundlePath];
-    return [rootDocDir stringByAppendingPathComponent:@"WebResource/en"];
+    return [rootDocDir stringByAppendingPathComponent:@"WebResource/zh"];
 }
 
 -(NSURL *)loadRootHtmlPage:(NSString *)name{

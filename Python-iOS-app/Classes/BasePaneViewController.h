@@ -12,4 +12,5 @@
 @interface BasePaneViewController : UIViewController
 @property (nonatomic,weak) MSDynamicsDrawerViewController *drawerController;
 @property (nonatomic,readonly,strong) UINavigationBar *navigationBar;
+-(void)viewControllerWillShow;
 @end

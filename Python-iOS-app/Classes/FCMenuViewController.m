@@ -28,10 +28,10 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view.
     _rowArray = @[
-                  @[@"Lesson",@"lessonClick"],
-                  @[@"FreeCode",@"freeCodeClick"],
-                  @[@"Setting",@"setClick"],
-                  @[@"About",@"aboutClick"]
+                  @[NSLocalizedString(@"lesson", nil),@"lessonClick"],
+                  @[NSLocalizedString(@"freecode", nil),@"freeCodeClick"],
+                  @[NSLocalizedString(@"setting", nil),@"setClick"],
+                  @[NSLocalizedString(@"about", nil),@"aboutClick"]
                 ];
 }
 
@@ -60,7 +60,7 @@
 
 -(void)aboutClick{
     BaseWebViewController *about = [[BaseWebViewController alloc] init];
-    about.title = @"About";
+    about.title = NSLocalizedString(@"about", nil);
     [self setPaneViewController:about];
     [about loadURL:[[FCLessonContentManager defaultManager] loadRootHtmlPage:@"about"]];
 }
@@ -71,6 +71,7 @@
     if (self.drawerController.paneState != MSDynamicsDrawerPaneStateClosed) {
         [self.drawerController setPaneState:MSDynamicsDrawerPaneStateClosed animated:YES allowUserInterruption:NO completion:nil];
     }
+    [vc viewControllerWillShow];
 }
 
 -(UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{

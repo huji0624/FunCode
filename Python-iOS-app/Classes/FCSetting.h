@@ -7,12 +7,10 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "FXForms.h"
 
-@interface FCSetting : NSObject
+@interface FCSetting : NSObject<FXForm>
 
-+(instancetype)defaultSetting;
-
-@property (nonatomic,assign) CGFloat editorFontSize;
-@property (nonatomic,assign) CGFloat outPutFontSize;
+@property (nonatomic,assign) NSUInteger editorFontSize;
 
 @end

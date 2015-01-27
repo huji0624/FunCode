@@ -9,6 +9,7 @@
 #import <Foundation/Foundation.h>
 
 const static NSString *FCCache_Key_CurrentLesson = @"curlesson";
+const static NSString *FCCache_Key_EditorFontSize = @"edfontsize";
 
 @interface FCCache : NSObject
 

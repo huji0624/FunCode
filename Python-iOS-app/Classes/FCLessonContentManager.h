@@ -14,6 +14,8 @@
 
 -(void)deployPackingLesson;
 
+-(NSURL*)baseURL;
+
 -(NSURL*)loadRootHtmlPage:(NSString*)name;
 
 -(FCLesson*)lesson:(NSUInteger)lesson;

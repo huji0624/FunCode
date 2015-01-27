@@ -48,6 +48,10 @@
     return _navigationBar;
 }
 
+-(void)viewControllerWillShow{
+    
+}
+
 -(void)openDrawerClick{
     [self.drawerController setPaneState:MSDynamicsDrawerPaneStateOpen inDirection:MSDynamicsDrawerDirectionLeft animated:YES allowUserInterruption:NO completion:nil];
 }
