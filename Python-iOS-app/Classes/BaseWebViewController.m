@@ -8,6 +8,7 @@
 
 #import "BaseWebViewController.h"
 #import <MBProgressHUD.h>
+#import "FCLessonContentManager.h"
 
 @interface BaseWebViewController ()<UIWebViewDelegate>
 @property (nonatomic,strong) UIWebView *webView;
@@ -31,7 +32,7 @@
     hud.labelText = @"Loading...";
     dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_LOW, 0), ^{
         NSString *hs = [NSString stringWithContentsOfFile:[url absoluteString] encoding:NSUTF8StringEncoding error:nil];
-        [self.webView loadHTMLString:hs baseURL:[NSURL URLWithString:nil]];
+        [self.webView loadHTMLString:hs baseURL:[[FCLessonContentManager defaultManager] baseURL]];
         dispatch_sync(dispatch_get_main_queue(), ^{
             [hud hide:YES];
         });

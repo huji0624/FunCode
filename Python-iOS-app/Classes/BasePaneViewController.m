@@ -18,6 +18,15 @@
     CRGradientNavigationBar *_navigationBar;
 }
 
+- (instancetype)init
+{
+    self = [super init];
+    if (self) {
+        self.hasOpenDrawer = YES;
+    }
+    return self;
+}
+
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
@@ -26,11 +35,14 @@
     NSArray *colors = [NSArray arrayWithObjects:firstColor, secondColor, nil];
     [[CRGradientNavigationBar appearance] setBarTintGradientColors:colors];
     
-    UIBarButtonItem *drawer = [[UIBarButtonItem alloc] initWithTitle:@"Drawer" style:UIBarButtonItemStyleBordered target:self action:@selector(openDrawerClick)];
     
     UINavigationItem *item = [[UINavigationItem alloc] initWithTitle:self.title];
-    item.leftBarButtonItem = drawer;
     _navigationItem = item;
+    
+    if (self.hasOpenDrawer) {
+        UIBarButtonItem *drawer = [[UIBarButtonItem alloc] initWithTitle:@"Drawer" style:UIBarButtonItemStyleBordered target:self action:@selector(openDrawerClick)];
+        item.leftBarButtonItem = drawer;
+    }
     
     CRGradientNavigationBar *bar = [[CRGradientNavigationBar alloc] initWithFrame:CGRectMake(0, 0, self.view.bounds.size.width, 50)];
     [bar pushNavigationItem:item animated:YES];

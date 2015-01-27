@@ -278,8 +278,6 @@
 				A59176C61A74C3B800186F83 /* FCMenuViewController.m */,
 				A59176CC1A74C59800186F83 /* BaseWebViewController.h */,
 				A59176CD1A74C59800186F83 /* BaseWebViewController.m */,
-				CE95DAA91A761F770086CD5C /* FCLessonViewController.h */,
-				CE95DAAA1A761F770086CD5C /* FCLessonViewController.m */,
 			);
 			name = ViewControllers;
 			sourceTree = "<group>";
@@ -418,6 +416,8 @@
 		CE95DAA51A7616950086CD5C /* FCLesson */ = {
 			isa = PBXGroup;
 			children = (
+				CE95DAA91A761F770086CD5C /* FCLessonViewController.h */,
+				CE95DAAA1A761F770086CD5C /* FCLessonViewController.m */,
 				A58E52E71A74974D00C298C7 /* FCLessonContentManager.h */,
 				A58E52E81A74974D00C298C7 /* FCLessonContentManager.m */,
 				CE95DAA61A7616CB0086CD5C /* FCLesson.h */,
@@ -490,8 +490,6 @@
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
-			knownRegions = (
-			);
 			mainGroup = 04A1DE2017C4FE4E00B87DED;
 			productRefGroup = 04A1DE2A17C4FE4E00B87DED /* Products */;
 			projectDirPath = "";

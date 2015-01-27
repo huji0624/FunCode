@@ -10,7 +10,7 @@
 #import "FCCache.h"
 #import "FCEditorViewController.h"
 #import "FCLessonContentManager.h"
-
+#import "BaseWebViewController.h"
 
 @interface FCLessonViewController ()<UITableViewDataSource,UITableViewDelegate,FCEditorViewControllerDelegate>
 
@@ -18,6 +18,7 @@
 
 @implementation FCLessonViewController{
     UITableView *_lessonTableView;
+    FCLesson *_currentLesson;
 }
 
 - (void)viewDidLoad {
@@ -51,12 +52,45 @@
         return;
     }
     
-    FCEditorViewController *edVC = [[FCEditorViewController alloc] init];
-    edVC.lesson = [[FCLessonContentManager defaultManager] lesson:indexPath.row];
-    edVC.mode = FCEditorMode_Lesson;
-    edVC.delegate=self;
-    [[UIApplication sharedApplication].keyWindow.rootViewController presentViewController:edVC animated:YES completion:^{
-        
+    FCLesson *lesson = [[FCLessonContentManager defaultManager] lesson:indexPath.row];
+    
+    if ([[NSFileManager defaultManager] fileExistsAtPath:lesson.outPutAnswer.absoluteString]) {
+        FCEditorViewController *edVC = [[FCEditorViewController alloc] init];
+        edVC.lesson = lesson;
+        edVC.mode = FCEditorMode_Lesson;
+        edVC.delegate=self;
+        [[UIApplication sharedApplication].keyWindow.rootViewController presentViewController:edVC animated:YES completion:^{
+            
+        }];
+    }else{
+        [self showLessonView:lesson];
+    }
+    
+    _currentLesson = lesson;
+}
+
+-(void)showLessonView:(FCLesson*)lesson{
+    
+    
+    BaseWebViewController *web = [[BaseWebViewController alloc] init];
+    web.hasOpenDrawer=NO;
+    web.title=[NSString stringWithFormat:@"Lesson %@",@(lesson.lessonIndex)];
+    [[UIApplication sharedApplication].keyWindow.rootViewController presentViewController:web animated:YES completion:^{
+        UIBarButtonItem *back = [[UIBarButtonItem alloc] initWithTitle:NSLocalizedString(@"back", nil) style:UIBarButtonItemStyleBordered target:self action:@selector(webBackClick)];
+        UIBarButtonItem *next = [[UIBarButtonItem alloc] initWithTitle:NSLocalizedString(@"next", nil) style:UIBarButtonItemStyleBordered target:self action:@selector(webNextClick)];
+        web.navigationItem.leftBarButtonItem=back;
+        web.navigationItem.rightBarButtonItem=next;
+        [web loadURL:lesson.content];
+    }];
+}
+
+-(void)webBackClick{
+    [[UIApplication sharedApplication].keyWindow.rootViewController dismissViewControllerAnimated:YES completion:nil];
+}
+
+-(void)webNextClick{
+    [[UIApplication sharedApplication].keyWindow.rootViewController dismissViewControllerAnimated:YES completion:^{
+        [self didPassLesson:_currentLesson];
     }];
 }
 

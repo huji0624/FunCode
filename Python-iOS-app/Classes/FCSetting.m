@@ -30,8 +30,8 @@
                FXFormFieldCell: [FXFormStepperCell class],
                FXFormFieldAction: ^(id sender){
                    FXFormStepperCell *sep = sender;
-                   self.editorFontSize=sep.stepper.stepValue;
-                   [[FCCache defaultCache] setObject:@(sep.stepper.stepValue) forKey:FCCache_Key_EditorFontSize];
+                   self.editorFontSize=sep.stepper.value;
+                   [[FCCache defaultCache] setObject:@(sep.stepper.value) forKey:FCCache_Key_EditorFontSize];
                },
                FXFormFieldDefaultValue:@(self.editorFontSize)
                }
