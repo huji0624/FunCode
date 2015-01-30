@@ -47,12 +47,6 @@ static FCLessonContentManager *_instance = nil;
     return les_;
 }
 
--(NSURL *)baseURL{
-    NSString *rootDocDir = [[NSBundle mainBundle] bundlePath];
-    return [NSURL fileURLWithPath:[rootDocDir stringByAppendingPathComponent:@"WebResource/bootstrap"]];
-//    return nil;
-}
-
 -(NSString*)rootLessonDir{
     return [[self rootDirPath] stringByAppendingFormat:@"/lessons"];
 }
