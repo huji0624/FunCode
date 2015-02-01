@@ -1,7 +1,9 @@
+#!/usr/bin/python
 # -*- coding:utf8 -*-
 
 template = \
 '''
+
 <html>
 <head>
 <meta charset='utf-8'>
@@ -15,13 +17,13 @@ template = \
 			<h3 class="text-center text-success">
 				标题
 			</h3>
-			<p class="text-error text-left">
+			<p class="text-danger text-left">
 				前言
 			</p>
-			<p>
+			<p class="text-info">
 				讲解
 			</p>
-			<p class="text-info">
+			<p class="text-warning">
 				<em>题目</em>
 			</p>
 			<p>

@@ -86,7 +86,7 @@
                         _backGroundView.alpha = 0.3;
                         [self.view addSubview:_backGroundView];
                         CGSize size = _backGroundView.bounds.size;
-                        _lessonWebView = [[UIWebView alloc] initWithFrame:CGRectMake(0, 0, size.width/3*2, size.height/4*3)];
+                        _lessonWebView = [[UIWebView alloc] initWithFrame:CGRectMake(0, 0, size.width/6*5, size.height/5*4)];
                         [_lessonWebView loadHTMLString:lesson_ baseURL:[self.lesson.content URLByDeletingLastPathComponent]];
                         _lessonWebView.center = CGPointMake(CGRectGetMidX(_backGroundView.frame), CGRectGetMidY(_backGroundView.frame));
                         [self.view addSubview:_lessonWebView];
@@ -139,6 +139,10 @@
 
 -(void)runClick{
     [_editorView resignFirstResponder];
+    
+    if ([_editorView.text stringByTrimmingCharactersInSet:nil].length==0) {
+        return;
+    }
     
     MBProgressHUD *hud = [MBProgressHUD showHUDAddedTo:self.view animated:YES];
     hud.mode = MBProgressHUDModeIndeterminate;

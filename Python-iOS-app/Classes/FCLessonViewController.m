@@ -11,8 +11,10 @@
 #import "FCEditorViewController.h"
 #import "FCLessonContentManager.h"
 #import "BaseWebViewController.h"
+#import "CCAlertView.h"
+#import <StoreKit/StoreKit.h>
 
-@interface FCLessonViewController ()<UITableViewDataSource,UITableViewDelegate,FCEditorViewControllerDelegate>
+@interface FCLessonViewController ()<UITableViewDataSource,UITableViewDelegate,FCEditorViewControllerDelegate,SKStoreProductViewControllerDelegate>
 
 @end
 
@@ -46,9 +48,39 @@
     return [[[FCCache defaultCache] objectForKey:FCCache_Key_CurrentLesson] integerValue];
 }
 
+-(void)goReview:(id)param{
+    NSString *appId = nil;
+    SKStoreProductViewController *reviewVC = [[SKStoreProductViewController alloc] init];
+    if (reviewVC) {
+        NSDictionary *dic = [NSDictionary dictionaryWithObject:appId forKey:SKStoreProductParameterITunesItemIdentifier];
+        [reviewVC setDelegate:self];
+        [reviewVC loadProductWithParameters:dic completionBlock:^(BOOL result, NSError *error) {
+            if (!result) {
+                [reviewVC dismissViewControllerAnimated:YES completion:nil];
+                NSLog(@"error loadProduct %@",error.localizedFailureReason);
+            }
+        }];
+        [self presentViewController:reviewVC animated:YES completion:nil];
+    }else{
+        // before iOS6.0
+        [[UIApplication sharedApplication] openURL:[NSURL URLWithString:[NSString stringWithFormat:@"itms-apps://ax.itunes.apple.com/WebObjects/MZStore.woa/wa/viewContentsUserReviews?type=Purple+Software&id=%@", appId]]];
+    }
+}
+
+-(void)productViewControllerDidFinish:(SKStoreProductViewController *)viewController{
+    [viewController dismissViewControllerAnimated:YES completion:nil];
+}
+
 -(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
     [tableView deselectRowAtIndexPath:indexPath animated:YES];
     if (indexPath.row==[[FCLessonContentManager defaultManager] maxLesson]) {
+        CCAlertView *alert = [[CCAlertView alloc] initWithTitle:NSLocalizedString(@"review", nil) message:NSLocalizedString(@"reviewmsg", nil)];
+        [alert addButtonWithTitle:NSLocalizedString(@"cancelbt", nil) block:nil];
+        [alert addButtonWithTitle:NSLocalizedString(@"reviewconfirmbt", nil) block:^{
+            //go review
+            [self goReview:nil];
+        }];
+        [alert show];
         return;
     }
     
@@ -70,7 +102,6 @@
 }
 
 -(void)showLessonView:(FCLesson*)lesson{
-    
     
     BaseWebViewController *web = [[BaseWebViewController alloc] init];
     web.hasOpenDrawer=NO;
@@ -95,9 +126,11 @@
 }
 
 -(void)didPassLesson:(FCLesson *)lesson{
-    [[FCCache defaultCache] setObject:@(lesson.lessonIndex+1) forKey:FCCache_Key_CurrentLesson];
-    [[FCCache defaultCache] flush];
-    [_lessonTableView reloadData];
+    if (lesson.lessonIndex==[self currentLesson]) {
+        [[FCCache defaultCache] setObject:@(lesson.lessonIndex+1) forKey:FCCache_Key_CurrentLesson];
+        [[FCCache defaultCache] flush];
+        [_lessonTableView reloadData];
+    }
 }
 
 -(NSInteger)numberOfSectionsInTableView:(UITableView *)tableView{
