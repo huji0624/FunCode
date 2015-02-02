@@ -37,6 +37,13 @@ static FCLessonContentManager *_instance = nil;
     
 }
 
+-(NSDictionary *)loadLessonTitles{
+    NSString *fpath = [[self rootDirPath] stringByAppendingPathComponent:@"lts.json"];
+    NSData *data = [NSData dataWithContentsOfFile:fpath];
+    NSDictionary *dict = [NSJSONSerialization JSONObjectWithData:data options:NSJSONReadingAllowFragments error:nil];
+    return dict;
+}
+
 -(FCLesson *)lesson:(NSUInteger)lesson{
     NSString *dirpath = [[self rootLessonDir] stringByAppendingFormat:@"/lesson%@",@(lesson)];
     FCLesson *les_ = [[FCLesson alloc] init];

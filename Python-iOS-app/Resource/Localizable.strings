@@ -6,3 +6,18 @@
   Copyright (c) 2015年 Fancyzero. All rights reserved.
 */
 "lessons" = "课程";
+"about" = "关于";
+"setting" = "设置";
+"freecodemode" = "自由模式";
+"lessonmode" = "课程模式";
+"editorFontSize" = "编辑器字体大小";
+"run" = "运行";
+"clear" = "清除";
+"back" = "返回";
+"next" = "下一课";
+"morelesson" = "更多课程...";
+"output" = "打印";
+"oops" = "出错";
+"yes" = "正确";
+"no" = "错误";
+"loading" = "加载中..";

@@ -35,6 +35,7 @@
 		CE95DAB21A7764230086CD5C /* FXForms.m in Sources */ = {isa = PBXBuildFile; fileRef = CE95DAB11A7764230086CD5C /* FXForms.m */; };
 		CEDD959D1A7E137C006C6482 /* StoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CEDD959C1A7E137C006C6482 /* StoreKit.framework */; };
 		CEDD95A01A7F47CA006C6482 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = CEDD959F1A7F47CA006C6482 /* Localizable.strings */; };
+		CEDD95A71A7F990B006C6482 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CEDD95A61A7F990B006C6482 /* Images.xcassets */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -177,6 +178,7 @@
 		CE95DAB11A7764230086CD5C /* FXForms.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FXForms.m; sourceTree = "<group>"; };
 		CEDD959C1A7E137C006C6482 /* StoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = StoreKit.framework; path = System/Library/Frameworks/StoreKit.framework; sourceTree = SDKROOT; };
 		CEDD959F1A7F47CA006C6482 /* Localizable.strings */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.strings; path = Localizable.strings; sourceTree = "<group>"; };
+		CEDD95A61A7F990B006C6482 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -231,6 +233,7 @@
 		04A1DE3217C4FE4E00B87DED /* Python-iOS-app */ = {
 			isa = PBXGroup;
 			children = (
+				CEDD95A61A7F990B006C6482 /* Images.xcassets */,
 				A59176CF1A74C75B00186F83 /* WebResource */,
 				CE95DA3F1A7211450086CD5C /* libPython */,
 				CE95DA381A71F4660086CD5C /* Classes */,
@@ -515,6 +518,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CEDD95A71A7F990B006C6482 /* Images.xcassets in Resources */,
 				A59176D01A74C75B00186F83 /* WebResource in Resources */,
 				CEDD95A01A7F47CA006C6482 /* Localizable.strings in Resources */,
 				04A1DE3F17C4FE4E00B87DED /* Default.png in Resources */,
@@ -654,6 +658,8 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = BA548A1AC8F2DD8408CEF35B /* Pods-Python-iOS-app.debug.xcconfig */;
 			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CLANG_ENABLE_OBJC_ARC = YES;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Python-iOS-app/Python-iOS-app-Prefix.pch";
@@ -674,6 +680,8 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 74D104E83A5087014E54E52D /* Pods-Python-iOS-app.release.xcconfig */;
 			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CLANG_ENABLE_OBJC_ARC = YES;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Python-iOS-app/Python-iOS-app-Prefix.pch";

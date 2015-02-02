@@ -30,21 +30,26 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
-    UIColor *firstColor = [UIColor colorWithRed:0.0f/255.0f green:148.0f/255.0f blue:211.0f/255.0f alpha:1.0f];
-    UIColor *secondColor = [UIColor colorWithRed:66.0f/255.0f green:190.0f/255.0f blue:245.0f/255.0f alpha:1.0f];
+    UIColor *firstColor = [UIColor colorWithRed:0.0f/255.0f green:0.0f/255.0f blue:0.0f/255.0f alpha:1.0f];
+    UIColor *secondColor = [UIColor colorWithRed:0.0f/255.0f green:0.0f/255.0f blue:0.0f/255.0f alpha:1.0f];
     NSArray *colors = [NSArray arrayWithObjects:firstColor, secondColor, nil];
     [[CRGradientNavigationBar appearance] setBarTintGradientColors:colors];
     
     
-    UINavigationItem *item = [[UINavigationItem alloc] initWithTitle:self.title];
+    UINavigationItem *item = [[UINavigationItem alloc] init];
+    UILabel *titleview = [[UILabel alloc] init];
+    titleview.text = self.title;
+    titleview.textColor = [UIColor whiteColor];
+    [titleview sizeToFit];
+    item.titleView=titleview;
     _navigationItem = item;
     
     if (self.hasOpenDrawer) {
-        UIBarButtonItem *drawer = [[UIBarButtonItem alloc] initWithTitle:@"Drawer" style:UIBarButtonItemStyleBordered target:self action:@selector(openDrawerClick)];
+        UIBarButtonItem *drawer = [[UIBarButtonItem alloc] initWithImage:[UIImage imageNamed:@"drawer"] landscapeImagePhone:nil style:UIBarButtonItemStyleBordered target:self action:@selector(openDrawerClick)];
         item.leftBarButtonItem = drawer;
     }
     
-    CRGradientNavigationBar *bar = [[CRGradientNavigationBar alloc] initWithFrame:CGRectMake(0, 0, self.view.bounds.size.width, 50)];
+    CRGradientNavigationBar *bar = [[CRGradientNavigationBar alloc] initWithFrame:CGRectMake(0, 0, self.view.bounds.size.width, 70)];
     [bar pushNavigationItem:item animated:YES];
     [self.view addSubview:bar];
     _navigationBar = bar;

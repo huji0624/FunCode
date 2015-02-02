@@ -28,8 +28,8 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view.
     _rowArray = @[
-                  @[NSLocalizedString(@"lesson", nil),@"lessonClick"],
-                  @[NSLocalizedString(@"freecode", nil),@"freeCodeClick"],
+                  @[NSLocalizedString(@"lessonmode", nil),@"lessonClick"],
+                  @[NSLocalizedString(@"freecodemode", nil),@"freeCodeClick"],
                   @[NSLocalizedString(@"setting", nil),@"setClick"],
                   @[NSLocalizedString(@"about", nil),@"aboutClick"]
                 ];

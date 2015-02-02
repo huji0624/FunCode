@@ -16,6 +16,8 @@
 
 -(NSURL*)loadRootHtmlPage:(NSString*)name;
 
+-(NSDictionary*)loadLessonTitles;
+
 -(FCLesson*)lesson:(NSUInteger)lesson;
 -(NSUInteger)maxLesson;
 

@@ -29,7 +29,7 @@
 }
 
 -(NSString *)title{
-    return @"Setting";
+    return NSLocalizedString(@"setting", nil);
 }
 
 - (void)didReceiveMemoryWarning {

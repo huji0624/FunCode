@@ -21,6 +21,7 @@
 @implementation FCLessonViewController{
     UITableView *_lessonTableView;
     FCLesson *_currentLesson;
+    NSDictionary *_titles;
 }
 
 - (void)viewDidLoad {
@@ -31,6 +32,8 @@
     _lessonTableView.delegate=self;
     _lessonTableView.dataSource=self;
     [self.view addSubview:_lessonTableView];
+    
+    _titles = [[FCLessonContentManager defaultManager] loadLessonTitles];
     
     [_lessonTableView reloadData];
 }
@@ -105,7 +108,7 @@
     
     BaseWebViewController *web = [[BaseWebViewController alloc] init];
     web.hasOpenDrawer=NO;
-    web.title=[NSString stringWithFormat:@"Lesson %@",@(lesson.lessonIndex)];
+    web.title=[NSString stringWithFormat:@"%@ %@",NSLocalizedString(@"lessons", nil),@(lesson.lessonIndex)];
     [[UIApplication sharedApplication].keyWindow.rootViewController presentViewController:web animated:YES completion:^{
         UIBarButtonItem *back = [[UIBarButtonItem alloc] initWithTitle:NSLocalizedString(@"back", nil) style:UIBarButtonItemStyleBordered target:self action:@selector(webBackClick)];
         UIBarButtonItem *next = [[UIBarButtonItem alloc] initWithTitle:NSLocalizedString(@"next", nil) style:UIBarButtonItemStyleBordered target:self action:@selector(webNextClick)];
@@ -149,12 +152,19 @@
     static NSString *idf = @"lessonCell";
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:idf];
     if (!cell) {
-        cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:idf];
+        cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleSubtitle reuseIdentifier:idf];
     }
     if (indexPath.row==[[FCLessonContentManager defaultManager] maxLesson]) {
-        cell.textLabel.text = [NSString stringWithFormat:@"Waiting For More Lessons..."];
+        cell.textLabel.text = NSLocalizedString(@"morelesson", nil);
     }else{
-        cell.textLabel.text = [NSString stringWithFormat:@"Lesson %@",@(indexPath.row)];
+        cell.textLabel.text = [NSString stringWithFormat:@"%@ %@",NSLocalizedString(@"lessons", nil),@(indexPath.row)];
+        NSString *key = [NSString stringWithFormat:@"lesson%@",@(indexPath.row)];
+        cell.detailTextLabel.text = [_titles objectForKey:key];
+    }
+    if (indexPath.row==[self currentLesson]) {
+        cell.imageView.image = [UIImage imageNamed:@"question"];
+    }else{
+        cell.imageView.image = [UIImage imageNamed:@"check"];
     }
     return cell;
 }

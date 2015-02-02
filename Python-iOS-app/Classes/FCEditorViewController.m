@@ -48,8 +48,8 @@
 }
 
 -(void)layoutLessonViews{
-    UIBarButtonItem *backBI = [[UIBarButtonItem alloc] initWithTitle:@"Back" style:UIBarButtonItemStyleBordered target:self action:@selector(backClick)];
-    UIBarButtonItem *lessonBI = [[UIBarButtonItem alloc] initWithTitle:@"Lesson" style:UIBarButtonItemStyleBordered target:self action:@selector(lessonClick)];
+    UIBarButtonItem *backBI = [[UIBarButtonItem alloc] initWithTitle:NSLocalizedString(@"back", nil) style:UIBarButtonItemStyleBordered target:self action:@selector(backClick)];
+    UIBarButtonItem *lessonBI = [[UIBarButtonItem alloc] initWithTitle:NSLocalizedString(@"lessons", nil) style:UIBarButtonItemStyleBordered target:self action:@selector(lessonClick)];
     self.navigationItem.leftBarButtonItems = @[backBI,lessonBI];
     
     [self showLessonView:NO];
@@ -71,7 +71,7 @@
         }else{
             MBProgressHUD *hud = [MBProgressHUD showHUDAddedTo:self.view animated:YES];
             hud.mode = MBProgressHUDModeIndeterminate;
-            hud.labelText = NSLocalizedString(@"loadlesson", nil);
+            hud.labelText = NSLocalizedString(@"loading", nil);
             dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
                 NSError *err = nil;
                 NSString *lesson_ = [NSString stringWithContentsOfFile:self.lesson.content.absoluteString encoding:NSUTF8StringEncoding error:&err];
@@ -104,7 +104,7 @@
 
 -(NSString *)title{
     if (self.mode==FCEditorMode_Lesson) {
-        return [NSString stringWithFormat:@"Lesson %@",@(self.lesson.lessonIndex)];
+        return [NSString stringWithFormat:@"%@ %@",NSLocalizedString(@"lessons", nil),@(self.lesson.lessonIndex)];
     }
     return @"Python";
 }
@@ -114,7 +114,7 @@
     if (Py_IsInitialized()==0) {
         MBProgressHUD *hud = [MBProgressHUD showHUDAddedTo:self.view animated:YES];
         hud.mode = MBProgressHUDModeIndeterminate;
-        hud.labelText = NSLocalizedString(@"loadpython", nil);
+        hud.labelText = NSLocalizedString(@"loading", nil);
         dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
             //init python
             //get python lib path and set this path as python home directory
@@ -146,7 +146,7 @@
     
     MBProgressHUD *hud = [MBProgressHUD showHUDAddedTo:self.view animated:YES];
     hud.mode = MBProgressHUDModeIndeterminate;
-    hud.labelText = NSLocalizedString(@"runpython", nil);
+    hud.labelText = NSLocalizedString(@"loading", nil);
     dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
         
         NSMutableString *allcode = [NSMutableString string];
