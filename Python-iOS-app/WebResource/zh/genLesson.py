@@ -12,25 +12,25 @@ template = \
 </head>
 <body>
 <div class="container-fluid">
-	<div class="row-fluid">
-		<div class="span12">
-			<h3 class="text-center text-success">
-				标题
-			</h3>
-			<p class="text-danger text-left">
-				前言
-			</p>
-			<p class="text-info">
-				讲解
-			</p>
-			<p class="text-warning">
-				<em>题目</em>
-			</p>
-			<p>
-				<em>输出</em>
-			</p>
-		</div>
-	</div>
+<div class="row-fluid">
+<div class="span12">
+<h3 class="text-center text-success">
+标题
+</h3>
+<p class="text-danger text-left">
+前言
+</p>
+<p class="text-info">
+讲解
+</p>
+<p class="text-warning">
+<em>题目</em>
+</p>
+<p>
+<em>输出</em>
+</p>
+</div>
+</div>
 </div>
 </body>
 </html>

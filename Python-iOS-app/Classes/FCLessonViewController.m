@@ -36,7 +36,7 @@
 }
 
 -(NSString *)title{
-    return @"Lessons";
+    return NSLocalizedString(@"lessons", nil);
 }
 
 - (void)didReceiveMemoryWarning {

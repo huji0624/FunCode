@@ -1,0 +1,72 @@
+
+
+<html>
+<head>
+<meta charset='utf-8'>
+<link href="../../../bootstrap/css/bootstrap.css" rel="stylesheet">
+<link href="../../../bootstrap/css/bootstrap-theme.css" rel="stylesheet">
+</head>
+<body>
+<div class="container-fluid">
+	<div class="row-fluid">
+		<div class="span12">
+			<h3 class="text-center text-success">
+				数字和数学运算
+			</h3>
+			<p class="text-danger text-left">
+				数字<br/>
+				print 4<br/>
+				print 3.1415926
+			</p>
+			<p class="text-info">
+				数字是Python中的另外一种类型，它也能被print打印出来，如上面的4和3.1415926都是数字，但他们又属于两个不同的子类型，整数和浮点数。整数的概念就和我们中学所学过的整数是一样的，如6，8，19，0等等，浮点数可以看做带有小数点就是浮点数，如1.1，3.0，0.233等等。
+			</p>
+			<p class="text-danger text-left">
+				数学运算<br/>
+				+<br/>
+				-<br/>
+				*<br/>
+				/<br/>
+				%<br/>
+				(<br/>
+				)<br/>
+			</p>
+			<p class="text-info">
+			上面5个数学运算符分别是加，减，乘，除，取余，左括号，右括号。<br/>
+			</p>
+			<p class="text-info">
+			数字类型都可以通过这些运算符来进行运算，加，减，乘，除和我们中学中所学的运算作用是一样的，取余是指计算余数，比如：5%3的结果是多少呢，5除以3应该是商1余2，那么5%3的结果就是2，很简单吧。<br/>
+			</p>
+			<p class="text-danger text-left">
+				使用括号<br/>
+			</p>
+			<p class="text-info">
+			括号的作用也和我们在算式中的括号作用一样，可以改变运算的优先次序，比如1+3*4这个式子，应该先计算3*4为12，再计算1+12为13。如果用括号，可以改变运算顺序，(1+3)*4，这个式子的运算结果为16。<br/>
+			</p>
+			<p class="text-danger text-left">
+				python中的除法<br/>
+			</p>
+			<p class="text-info">
+			在python中计算除法有一个特殊的地方，如果参与运算的数字都是整数，那么结果也是整数，舍去小数部分。如：4/3结果为1。如果参与运算的数字都是浮点数，那么结果也会是浮点数，并保留一定的位数。如：4.0/3.0结果为1.3333333333...如果与运算的数的精确度不一样，比如一个浮点数和一个整数，那么python会把精确度低的数字转换为精确度高的数字再进行计算，比如4.0/3或者4/3.0，结果都是1.333333333...
+			</p>
+			<p class="text-danger text-left">
+				输出表达式<br/>
+			</p>
+			<p class="text-info">
+			比如，要打印从1到5的和，一个典型的打印数学运算的程序是这样的：
+<pre>
+print 1+2+3+4+5
+</pre>
+			<em>基本上，你可以认为python程序的执行过程是从右到左，从高优先级到低优先级的顺序，这里会先计算print后面的计算式，再把结果交给print进行打印。</em>
+			</p>
+			<p class="text-warning">
+				题目:1314+520的结果除以87的整数部分是奇数还是偶数?
+			</p>
+			<p>
+				如果是奇数，打印:<br/>1<br/>如果是偶数打印:<br/>2
+			</p>
+		</div>
+	</div>
+</div>
+</body>
+</html>

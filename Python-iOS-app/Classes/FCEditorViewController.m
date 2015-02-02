@@ -140,7 +140,7 @@
 -(void)runClick{
     [_editorView resignFirstResponder];
     
-    if ([_editorView.text stringByTrimmingCharactersInSet:nil].length==0) {
+    if ([_editorView.text stringByTrimmingCharactersInSet:[NSCharacterSet whitespaceAndNewlineCharacterSet]].length==0) {
         return;
     }
     
@@ -150,6 +150,7 @@
     dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
         
         NSMutableString *allcode = [NSMutableString string];
+        [allcode appendString:@"# -*- coding:utf8 -*-\n"];
         
         if ([[NSFileManager defaultManager] fileExistsAtPath:self.lesson.inputPython.absoluteString]) {
             NSString *input = [NSString stringWithContentsOfFile:self.lesson.inputPython.absoluteString encoding:NSUTF8StringEncoding error:nil];
@@ -163,10 +164,14 @@
         NSString* info = [run run];
         NSString* err = [run err];
         
+        info = [info stringByTrimmingCharactersInSet:[NSCharacterSet whitespaceAndNewlineCharacterSet]];
+        
         NSString *answer = [NSString stringWithContentsOfFile:self.lesson.outPutAnswer.absoluteString encoding:NSUTF8StringEncoding error:nil];
         if (!answer) {
             assert("no answer");
         }
+        
+        answer = [answer stringByTrimmingCharactersInSet:[NSCharacterSet whitespaceAndNewlineCharacterSet]];
         
         dispatch_sync(dispatch_get_main_queue(), ^{
             [hud hide:YES];
@@ -188,7 +193,7 @@
                         };
                         [alert show];
                     }else{
-                        AMSmoothAlertView *alert = [[AMSmoothAlertView alloc] initDropAlertWithTitle:NSLocalizedString(@"no", nil) andText:info andCancelButton:NO forAlertType:AlertFailure];
+                        AMSmoothAlertView *alert = [[AMSmoothAlertView alloc] initDropAlertWithTitle:NSLocalizedString(@"no", nil) andText:info andCancelButton:NO forAlertType:AlertInfo];
                         [alert show];
                     }
                 }
