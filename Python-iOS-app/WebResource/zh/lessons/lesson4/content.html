@@ -1,0 +1,61 @@
+
+
+<html>
+<head>
+<meta charset='utf-8'>
+<link href="../../../bootstrap/css/bootstrap.css" rel="stylesheet">
+<link href="../../../bootstrap/css/bootstrap-theme.css" rel="stylesheet">
+</head>
+<body>
+<div class="container-fluid">
+<div class="row-fluid">
+<div class="span12">
+<h3 class="text-center text-success">
+变量与"="
+</h3>
+<p class="text-danger text-left">
+常量
+</p>
+<p class="text-info">
+在前几课中讲了两种类型，数字和字符串，都是属于常量。常量是计算机语言中常用的术语，你可以理解为常量是一旦在程序中写下来，就不可以改变的值，就像我们日常生活中使用的纸币，一旦这张纸币被印刷出来，那么他的值（面值）就不可以改变了。在前几课中，0，1314，3.1415，"love"等等都是常量。但是仅仅使用常量并不能满足我们程序的需求，我们经常需要暂时存储某些值，这时就需要用到变量了。
+</p>
+<p class="text-danger text-left">
+变量
+</p>
+<p class="text-info">
+变量是这一课新引入的概念，它和常量常常是相对的，我们可以把变量和中学数学中的未知数x类比起来理解，我们之前所学的对常量的操作都可以运用到变量上。我们先来看一下程序中变量的例子：
+</p>
+<pre>
+z=10
+y=4
+z=7
+x=z+y
+print x
+</pre>
+<p class="text-info">
+这里的"z=10"，我们称之为赋值，这里的z是一个变量，"="为赋值符号，也就是说把10这个值给了z，也可以理解为把10存到了z中，第三行"z=7"，改变了z这个变量的值，把新值7存到了z中，旧值10也就被抛弃掉了，所以最终打印的值是11。
+</p>
+<p class="text-danger text-left">
+变量的命名
+</p>
+<p class="text-info">
+上面的z,x,y等都是变量名，变量在命名的时候，需要遵循这些规则：
+<br/>
+标识符的第一个字符必须是字母表中的字母（大写或小写）或者一个下划线（‘ _ ’）。
+<br/>
+标识符名称的其他部分可以由字母（大写或小写）、下划线（‘ _ ’）或数字（0-9）组成。
+<br/>
+标识符名称是对大小写敏感的。例如，myname和myName不是一个标识符。注意前者中的小写n和后者中的大写N。
+<br/>
+下面是变量命名有效和无效的一些列子，你可以通过与上面的规则对比一下，看看为什么有的有效，有的无效。
+<br/>
+有效：i、__my_name、name_23和a1b2_c3。
+<br/>
+无效：2things、this is spaced out和my-name。
+<br/>
+</p>
+</div>
+</div>
+</div>
+</body>
+</html>
