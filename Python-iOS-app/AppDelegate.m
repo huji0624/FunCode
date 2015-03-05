@@ -10,6 +10,7 @@
 
 #import "ViewController.h"
 #import "FCCache.h"
+#import "FCAdManager.h"
 
 @implementation AppDelegate
 
@@ -24,6 +25,8 @@
     self.viewController = [[ViewController alloc] init];
     self.window.rootViewController = self.viewController;
     [self.window makeKeyAndVisible];
+    
+    [[FCAdManager defaultManager] initGADBannerWithAdPositionAtTop:NO];
     
     return YES;
 }

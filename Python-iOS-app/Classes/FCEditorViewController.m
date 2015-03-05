@@ -13,6 +13,7 @@
 #import "AMSmoothAlertView.h"
 #import "FCSetting.h"
 #import "FCLessonContentManager.h"
+#import "FCAdManager.h"
 
 @interface FCEditorViewController ()
 
@@ -182,7 +183,12 @@
             }else if(self.mode==FCEditorMode_Lesson){
                 if (err) {
                     AMSmoothAlertView *alert = [[AMSmoothAlertView alloc] initDropAlertWithTitle:NSLocalizedString(@"oops", nil) andText:err andCancelButton:NO forAlertType:AlertFailure];
+                    alert.completionBlock = ^(AMSmoothAlertView *sal, UIButton *bt){
+                        [[FCAdManager defaultManager] hideBannerView];
+                    };
                     [alert show];
+                    
+                    [[FCAdManager defaultManager] showBannerView];
                 }else{
                     if ([info isEqualToString:answer]) {
                         AMSmoothAlertView *alert = [[AMSmoothAlertView alloc] initDropAlertWithTitle:NSLocalizedString(@"yes", nil) andText:info andCancelButton:NO forAlertType:AlertSuccess];
@@ -194,7 +200,12 @@
                         [alert show];
                     }else{
                         AMSmoothAlertView *alert = [[AMSmoothAlertView alloc] initDropAlertWithTitle:NSLocalizedString(@"no", nil) andText:info andCancelButton:NO forAlertType:AlertInfo];
+                        alert.completionBlock = ^(AMSmoothAlertView *sal, UIButton *bt){
+                            [[FCAdManager defaultManager] hideBannerView];
+                        };
                         [alert show];
+                        
+                        [[FCAdManager defaultManager] showBannerView];
                     }
                 }
             }
