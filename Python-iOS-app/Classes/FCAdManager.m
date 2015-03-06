@@ -44,6 +44,7 @@ static FCAdManager *instance_ = nil;
 }
 
 -(void)showBannerView{
+    [[[[UIApplication sharedApplication] delegate] window] bringSubviewToFront:bannerView_];
     bannerView_.hidden=NO;
 }
 
@@ -91,7 +92,7 @@ static FCAdManager *instance_ = nil;
     bannerView_.adUnitID = ADMOB_UID;
     bannerView_.delegate = self;
     [bannerView_ setRootViewController:[UIApplication sharedApplication].keyWindow.rootViewController];
-    [[UIApplication sharedApplication].keyWindow.rootViewController.view addSubview:bannerView_];
+    [[[[UIApplication sharedApplication] delegate] window] addSubview:bannerView_];
     [bannerView_ loadRequest:[self createRequest]];
     
     bannerView_.hidden = YES;

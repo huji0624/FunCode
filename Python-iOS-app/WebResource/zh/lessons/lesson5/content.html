@@ -26,14 +26,59 @@ print True
 与或非
 </p>
 <p class="text-info">
-
+真和假也可以用来进行运算，不过真假的运算一般不会用数学运算符加减乘除等，真和假一般都常用“与”，”或“，”非“这三个运算符来进行运算，他们在python中分别用”and“，”or“，”not“这三个关键字(如同print一样，在python中有特殊作用的单词成为关键字)来表示。
 </p>
-<p class="text-warning">
-<em>题目</em>
+<p class="text-danger text-left">
+与 and
 </p>
-<p>
-<em>输出</em>
+<pre>
+z=x and y
+</pre>
+<p class="text-info">
+这个表达式把“x与y”的值赋值给了变量z。“与”运算的规则是这样的：
+<br/>
+如果x为False，x and y返回False，否则它返回y的计算值。
+<br/>
+<em>例子：x = False; y = True; x and y，由于x是False，返回False。在这里，Python不会计算y，因为它知道这个表达式的值肯定是False（因为x是False）。这个现象称为短路计算。</em>
 </p>
+<p class="text-danger text-left">
+或 or
+</p>
+<pre>
+z=x or y
+</pre>
+<p class="text-info">
+“或”运算的规则是：
+<br/>
+如果x是True，它返回True，否则它返回y的计算值。
+<br/>
+<em>例子：x = True; y = False; x or y返回True。短路计算在这里也适用。</em>
+</p>
+<p class="text-danger text-left">
+非 not
+</p>
+<pre>
+z=not x
+</pre>
+<p class="text-info">
+“非“运算的规则：
+<br/>
+如果x为True，返回False。如果x为False，它返回True。
+<br/>
+<em>例子：x = True; not y返回False。</em>
+</p>
+<p class="text-danger text-left">
+使用括号来改变运算顺序
+</p>
+<p class="text-info">
+对于真和假的与或非运算，类似加减乘除的运算一样也有运算的优先级，我们也可以用括号来改变这个运算优先级，有兴趣的朋友可以到网上自行搜索python的逻辑运算符的优先级，这里我就不介绍了，因为我自己也记不住-_-!。
+<br/>
+因此我强烈建议在你的程序表达式中使用括号明显地来控制运算的优先级，比如像下面这样：
+</p>
+<pre>
+	print (True and False) or (not False)
+</pre>
+<p>这里的输出应该是True.我相信你可以自己思考出为什么是这个结果.</p>
 </div>
 </div>
 </div>

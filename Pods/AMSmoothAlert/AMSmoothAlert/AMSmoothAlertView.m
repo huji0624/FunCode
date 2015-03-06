@@ -122,7 +122,7 @@
 
 - (UIView*) alertPopupView
 {
-    UIView * alertSquare = [[UIView alloc]initWithFrame:CGRectMake(0, 0, self.frame.size.width/4*3, self.frame.size.height/6*5)];
+    UIView * alertSquare = [[UIView alloc]initWithFrame:CGRectMake(0, 0, self.frame.size.width/4*3, self.frame.size.height/3*2)];
     
     alertSquare.backgroundColor = [UIColor colorWithRed:0.937 green:0.937 blue:0.937 alpha:1];
     alertSquare.center = CGPointMake([self screenFrame].size.width/2, -[self screenFrame].size.height/2);
@@ -154,6 +154,7 @@
         default:
             break;
     }
+    
     [[[[UIApplication sharedApplication] delegate] window] addSubview:self];
 }
 
