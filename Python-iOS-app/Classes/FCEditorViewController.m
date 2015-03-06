@@ -177,19 +177,24 @@
         dispatch_sync(dispatch_get_main_queue(), ^{
             [hud hide:YES];
             
-            if (self.mode==FCEditorMode_Free) {
-                AMSmoothAlertView *alert = [[AMSmoothAlertView alloc] initDropAlertWithTitle:NSLocalizedString(@"output", nil) andText:info andCancelButton:NO forAlertType:AlertInfo];
+            if (err) {
+                AMSmoothAlertView *alert = [[AMSmoothAlertView alloc] initDropAlertWithTitle:NSLocalizedString(@"oops", nil) andText:err andCancelButton:NO forAlertType:AlertFailure];
+                alert.completionBlock = ^(AMSmoothAlertView *sal, UIButton *bt){
+                    [[FCAdManager defaultManager] hideBannerView];
+                };
                 [alert show];
-            }else if(self.mode==FCEditorMode_Lesson){
-                if (err) {
-                    AMSmoothAlertView *alert = [[AMSmoothAlertView alloc] initDropAlertWithTitle:NSLocalizedString(@"oops", nil) andText:err andCancelButton:NO forAlertType:AlertFailure];
+                
+                [[FCAdManager defaultManager] showBannerView];
+            }else{
+                if (self.mode==FCEditorMode_Free) {
+                    AMSmoothAlertView *alert = [[AMSmoothAlertView alloc] initDropAlertWithTitle:NSLocalizedString(@"output", nil) andText:info andCancelButton:NO forAlertType:AlertInfo];
                     alert.completionBlock = ^(AMSmoothAlertView *sal, UIButton *bt){
                         [[FCAdManager defaultManager] hideBannerView];
                     };
                     [alert show];
                     
                     [[FCAdManager defaultManager] showBannerView];
-                }else{
+                }else if(self.mode==FCEditorMode_Lesson){
                     if ([info isEqualToString:answer]) {
                         AMSmoothAlertView *alert = [[AMSmoothAlertView alloc] initDropAlertWithTitle:NSLocalizedString(@"yes", nil) andText:info andCancelButton:NO forAlertType:AlertSuccess];
                         alert.completionBlock = ^(AMSmoothAlertView *sal, UIButton *bt){
@@ -207,9 +212,10 @@
                         
                         [[FCAdManager defaultManager] showBannerView];
                     }
+                }else{
+                    assert("not support mode.");
                 }
             }
-            
             
         });
     });

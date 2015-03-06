@@ -42,6 +42,8 @@
 		CEE4BFC81AA827D300808793 /* AdSupport.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CEE4BFC71AA827D300808793 /* AdSupport.framework */; };
 		CEE4BFCA1AA827EE00808793 /* CoreTelephony.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CEE4BFC91AA827EE00808793 /* CoreTelephony.framework */; };
 		CEE4BFCC1AA827F600808793 /* MessageUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CEE4BFCB1AA827F600808793 /* MessageUI.framework */; };
+		CEE4BFCF1AA97FB700808793 /* FCAboutViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CEE4BFCE1AA97FB700808793 /* FCAboutViewController.m */; };
+		CEE4BFD31AA980CF00808793 /* python.png in Resources */ = {isa = PBXBuildFile; fileRef = CEE4BFD21AA980CF00808793 /* python.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -219,6 +221,9 @@
 		CEE4BFC71AA827D300808793 /* AdSupport.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AdSupport.framework; path = System/Library/Frameworks/AdSupport.framework; sourceTree = SDKROOT; };
 		CEE4BFC91AA827EE00808793 /* CoreTelephony.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreTelephony.framework; path = System/Library/Frameworks/CoreTelephony.framework; sourceTree = SDKROOT; };
 		CEE4BFCB1AA827F600808793 /* MessageUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MessageUI.framework; path = System/Library/Frameworks/MessageUI.framework; sourceTree = SDKROOT; };
+		CEE4BFCD1AA97FB700808793 /* FCAboutViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FCAboutViewController.h; sourceTree = "<group>"; };
+		CEE4BFCE1AA97FB700808793 /* FCAboutViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FCAboutViewController.m; sourceTree = "<group>"; };
+		CEE4BFD21AA980CF00808793 /* python.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = python.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -335,6 +340,8 @@
 				A59176C61A74C3B800186F83 /* FCMenuViewController.m */,
 				A59176CC1A74C59800186F83 /* BaseWebViewController.h */,
 				A59176CD1A74C59800186F83 /* BaseWebViewController.m */,
+				CEE4BFCD1AA97FB700808793 /* FCAboutViewController.h */,
+				CEE4BFCE1AA97FB700808793 /* FCAboutViewController.m */,
 			);
 			name = ViewControllers;
 			sourceTree = "<group>";
@@ -508,6 +515,7 @@
 		CE95DAB41A7799BE0086CD5C /* Resource */ = {
 			isa = PBXGroup;
 			children = (
+				CEE4BFD21AA980CF00808793 /* python.png */,
 				CEDD959F1A7F47CA006C6482 /* Localizable.strings */,
 			);
 			name = Resource;
@@ -647,6 +655,7 @@
 				CEDD95A71A7F990B006C6482 /* Images.xcassets in Resources */,
 				A59176D01A74C75B00186F83 /* WebResource in Resources */,
 				CEDD95A01A7F47CA006C6482 /* Localizable.strings in Resources */,
+				CEE4BFD31AA980CF00808793 /* python.png in Resources */,
 				04A1DE3F17C4FE4E00B87DED /* Default.png in Resources */,
 				04A1DE4117C4FE4E00B87DED /* Default@2x.png in Resources */,
 				04A1DE4317C4FE4E00B87DED /* Default-568h@2x.png in Resources */,
@@ -698,6 +707,7 @@
 				04A1DE3917C4FE4E00B87DED /* main.m in Sources */,
 				A59176C41A74BD7700186F83 /* BasePaneViewController.m in Sources */,
 				CEE4BFC61AA8236E00808793 /* FCAdManager.m in Sources */,
+				CEE4BFCF1AA97FB700808793 /* FCAboutViewController.m in Sources */,
 				A59176C71A74C3B800186F83 /* FCMenuViewController.m in Sources */,
 				CE95DA3B1A71F4790086CD5C /* PythonRun.m in Sources */,
 				04A1DE3D17C4FE4E00B87DED /* AppDelegate.m in Sources */,

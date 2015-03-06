@@ -9,10 +9,10 @@
 #import "FCMenuViewController.h"
 #import "BasePaneViewController.h"
 #import "FCEditorViewController.h"
-#import "BaseWebViewController.h"
 #import "FCLessonContentManager.h"
 #import "FCSettingViewController.h"
 #import "FCLessonViewController.h"
+#import "FCAboutViewController.h"
 
 @interface FCMenuViewController ()
 
@@ -59,10 +59,9 @@
 }
 
 -(void)aboutClick{
-    BaseWebViewController *about = [[BaseWebViewController alloc] init];
+    FCAboutViewController *about = [[FCAboutViewController alloc] init];
     about.title = NSLocalizedString(@"about", nil);
     [self setPaneViewController:about];
-    [about loadURL:[[FCLessonContentManager defaultManager] loadRootHtmlPage:@"about"]];
 }
 
 -(void)setPaneViewController:(BasePaneViewController*)vc{
