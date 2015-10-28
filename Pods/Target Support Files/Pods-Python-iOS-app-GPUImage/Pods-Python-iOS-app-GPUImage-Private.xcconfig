@@ -1,6 +1,0 @@
-#include "Pods-Python-iOS-app-GPUImage.xcconfig"
-CLANG_MODULES_AUTOLINK = ${PODS_PYTHON_IOS_APP_GPUIMAGE_CLANG_MODULES_AUTOLINK}
-GCC_PREPROCESSOR_DEFINITIONS = $(inherited) COCOAPODS=1
-HEADER_SEARCH_PATHS = "${PODS_ROOT}/Headers/Build" "${PODS_ROOT}/Headers/Build/GPUImage" "${PODS_ROOT}/Headers/Public" "${PODS_ROOT}/Headers/Public/AFNetworking" "${PODS_ROOT}/Headers/Public/AMSmoothAlert" "${PODS_ROOT}/Headers/Public/CRGradientNavigationBar" "${PODS_ROOT}/Headers/Public/GPUImage" "${PODS_ROOT}/Headers/Public/MBProgressHUD" "${PODS_ROOT}/Headers/Public/MSDynamicsDrawerViewController"
-OTHER_LDFLAGS = ${PODS_PYTHON_IOS_APP_GPUIMAGE_OTHER_LDFLAGS} -ObjC
-PODS_ROOT = ${SRCROOT}
